@@ -111,6 +111,10 @@ button[type=roll].sheet-descr-roll::before,
     flex-wrap: nowrap;
 }
 
+.sheet-flex-1 {
+    flex: 1;
+}
+
 .sheet-jc-spcbtw {
     justify-content: space-between;
 }
@@ -119,12 +123,20 @@ button[type=roll].sheet-descr-roll::before,
     justify-content: space-around;
 }
 
+.sheet-jc-right {
+    justify-content: right;
+}
+
 .sheet-jc-center {
     justify-content: center;
 }
 
 .sheet-gap-10px {
     gap: 10px;
+}
+
+.sheet-gap-50px {
+    gap: 50px;
 }
 
 .sheet-ai-center,
@@ -340,6 +352,17 @@ button[type=roll].sheet-roll.sheet-d3::before {
 button[type=roll].sheet-roll.sheet-d66::before {
     font-family: 'dicefontd6';
     content: 'F F ';
+}
+
+button[type=roll].sheet-mutation-rolls::before {
+    content: '';
+}
+
+button[type=roll].sheet-mutation-rolls {
+    background-color: purple;
+    border-color: goldenrod;
+    color: black;
+    font-size: 1.1rem;
 }
 
 

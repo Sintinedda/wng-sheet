@@ -1,3 +1,4 @@
+<!--  TOP  -->
 <div class="sheet-bgtop" name="attr_bgtop" style="background-image: url(https://raw.githubusercontent.com/Sintinedda/wng-sheet/refs/heads/main/wng-sheet-bgs/bg-top.png);">
 
     <div class="sheet-top sheet-flex sheet-jc-spcbtw" style="padding: 35px 40px 0 40px; font-size: 2rem;">
@@ -19,10 +20,11 @@
 
 </div>
 
+
+<!--  BODY  -->
 <div class="sheet-bgmid sheet-ml--10px sheet-color-green" name="attr_bgmid" style="background-image: url(https://raw.githubusercontent.com/Sintinedda/wng-sheet/refs/heads/main/wng-sheet-bgs/bg-mid.png);">
 
     <input type="hidden" class="sheet-selecttoggle" name="attr_selectSheet" value="pc">
-
 
 
     <!--  PC SHEET  -->
@@ -91,7 +93,7 @@
             </div>
 
             <!--  ATTRIBUTES & TRAITS  -->
-            <div>
+            <div class="sheet-pb-10px">
 
                 <div class="sheet-titles sheet-flex sheet-jc-spcard">
                     <span>Attributs</span>
@@ -261,7 +263,7 @@
 
             <div class="sheet-titles">Compétences</div>
 
-            <div class="sheet-grid sheet-8 sheet-gridgap-15px sheet-mt-10px">
+            <div class="sheet-grid sheet-8 sheet-gridgap-15px sheet-mt-10px sheet-pb-10px">
                 <span class="sheet-gridtitles sheet-colstart">Compétence</span>
                 <span class="sheet-gridtitles">Sc.C</span>
                 <span class="sheet-gridtitles">Attribut</span>
@@ -719,10 +721,16 @@
             <!--  INJURIES  -->
             <div class="sheet-2colrow sheet-mb-30px"> 
 
-                <div class="sheet-titles">Blessures
-                    <div class="sheet-flex sheet-jc-spcard">
-                        <div class="sheet-subtitles">Blessures Mémorables</div>
-                        <div class="sheet-subtitles">Blessures Graves</div>
+                <div class="sheet-titles">
+                    <div class="sheet-flex sheet-jc-spcbtw">
+                        <div class="sheet-flex sheet-ai-center" style="width: 100%;">
+                            <div><button type="roll" name="roll_minjuries" class="sheet-roll sheet-roll-title" value="!rt [[1t[memorable-injuries]]]"></button></div>
+                            <div class="sheet-subtitles" style="margin-left: 60px;">Blessures Mémorables</div>
+                        </div>
+                        <div class="sheet-flex sheet-ai-center sheet-jc-right" style="width: 100%;">
+                            <div class="sheet-subtitles" style="margin-right: 70px;">Blessures Graves</div>
+                            <div><button type="roll" name="roll_minjuries" class="sheet-roll sheet-roll-title" value="!rt [[1t[traumatic-injuries]]]"></button></div>
+                        </div>
                     </div>
                 </div>
 
@@ -798,7 +806,7 @@
             </div>
 
             <!--  WEAPONS  -->
-            <div class="sheet-weapons">
+            <div class="sheet-weapons sheet-pb-10px">
 
                 <div class="sheet-titles">
                         <div style="position: absolute; margin-top: -2px;">
@@ -844,7 +852,7 @@
                         </select>
                         <input type="number" class="sheet-input sheet-number-fixed" name="attr_weapon_modifier" value="[[@{weapon_type}]]" title="@{weapon_modifier}" disabled>
                         <input type="number" class="sheet-input" name="attr_weapon_attack_ed" value="0" title="@{weapon_attack_ed}">
-                        <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} met un coup de @{weapon}}} {{dices=[[[[@{weapon_modifier}+@{weapon_attack_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{weapon_modifier}+@{weapon_attack_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{traits=@{weapon_traits}}} {{crit1=[[1d6]]}} {{crit2=[[1d6]]}} {{legend=0}}" title="Lancer jet d'attaque"></button>
+                        <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} met un coup de @{weapon}}} {{dices=[[[[@{weapon_modifier}+@{weapon_attack_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{weapon_modifier}+@{weapon_attack_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{traits=@{weapon_traits}}} {{criticalhits=[Coup Critique!!!](~@{character_name}|crits)}} {{legend=0}}" title="Lancer jet d'attaque"></button>
                         <input type="number" class="sheet-input" name="attr_weapon_damage_ed" value="0" title="@{attr_weapon_damage_ed}">
                         <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} inflige des Dégâts avec @{weapon}}} {{dices=[[[[@{weapon_ed}+@{weapon_damage_ed}]]d6>4cs>6cf<0]]}} {{pool=[[@{weapon_ed}+@{weapon_damage_ed}]]}} {{damage=[[@{weapon_rd}]]}} {{legend=0}}" title="Lancer jet de dégâts"></button>
                         <input type="number" class="sheet-input" name="attr_weapon_ammo" value="0" title="@{attr_weapon_ammo}">
@@ -965,7 +973,7 @@
             </div>
 
             <!--  PSYCHIC POWERS  -->
-            <div>
+            <div class="sheet-pb-10px">
 
                 <div class="sheet-titles">Pouvoir psychique</div>
 
@@ -1165,7 +1173,7 @@
             </div>
             
             <!--  SHIPS  -->
-            <div>
+            <div class="sheet-pb-10px">
                 
                 <div class="sheet-titles">Vaisseaux</div>
 
@@ -1419,13 +1427,19 @@
                         <button class="btn repcontrol_edit">Modify</button>
                         <button class="btn repcontrol_add">+Add</button>
                     </div>
+                    
+                    <div class="sheet-flex sheet-jc-spcbtw sheet-mt-10px">
+                        <button class="sheet-mutation-rolls" type="roll" name="roll_crits" value="!rt [[1t[benign-mutations]]]">Mut. Bégnine</button>
+                        <button class="sheet-mutation-rolls" type="roll" name="roll_crits" value="!rt [[1t[minor-mutations]]]">Mut. Mineure</button>
+                        <button class="sheet-mutation-rolls" type="roll" name="roll_crits" value="!rt [[1t[serious-mutations]]]">Mut. Majeure</button>
+                    </div>
 
                 </div>
 
             </div>
 
             <!--  ALLIANCES  -->
-            <div class="sheet-alliances">
+            <div class="sheet-alliances sheet-pb-10px">
 
                 <div class="sheet-titles">Alliances</div>
 
@@ -1527,7 +1541,7 @@
             </div>
 
             <!--  MISSIONS  -->
-            <div class="sheet-mb-30px">
+            <div class="sheet-pb-10px">
 
                 <div class="sheet-titles">Journal de mission</div>
 
@@ -1567,7 +1581,6 @@
         </div>
 
     </div>
-
 
 
     <!--  NPC SHEET  -->
@@ -1976,7 +1989,7 @@
         </div>
 
         <!--  WEAPONS  -->
-        <div>
+        <div class="sheet-mb-30px">
 
             <div class="sheet-titles">
                     <div style="position: absolute; margin-top: -2px;">
@@ -2179,7 +2192,7 @@
         </div>
 
         <!--  EQUIPMENTS  -->
-        <div class="sheet-p0-10px">
+        <div class="sheet-pb-10px">
 
             <div class="sheet-titles">Équipements</div>
 
@@ -2219,15 +2232,12 @@
 
 </div>
 
+
+<!--  BOT  -->
 <div class="sheet-bgbot" name="attr_bgbot" style="background-image: url(https://raw.githubusercontent.com/Sintinedda/wng-sheet/refs/heads/main/wng-sheet-bgs/bg-bot.png);">
     <div><img class="sheet-logo" src="https://raw.githubusercontent.com/Sintinedda/wng-sheet/refs/heads/main/wng-sheet-bgs/logo.png"></div>
     <span>Edited by Sintinedda</span>
 </div>
-
-
-
-
-
 
 
 
@@ -2270,14 +2280,12 @@
                     {{#damage}}<div><span class="sheet-rt-titles">Dégâts de base :</span><span class="sheet-rt-roll">{{damage}}</span></div>{{/damage}}
                     {{#result}}<div><span class="sheet-rt-titles">Résultat :</span><span class="sheet-rt-roll">{{result}} {{result2}}</span></div>{{/result}}
                 </div>
-                
-
 
                 <div class="sheet-rt-infos">
                     {{#legend}}<div><span class="sheet-rt-important">Les 6 comptent pour 2 Icônes.</span></div>{{/legend}}   
                     {{#info}}<div><span class="sheet-rt-titles">{{info}}</span></div>{{/info}}  
                     {{#rollWasCrit() wrath}} 
-                        {{#crit1}}<div class="sheet-rt-crits"><span class="sheet-rt-titles">Coup critique :</span><span class="sheet-rt-roll">{{crit1}} {{crit2}}</span></div>{{/crit1}}   
+                        {{#criticalhits}}<div class="sheet-rt-crits"><span class="sheet-rt-roll">{{criticalhits}}</span></div>{{/criticalhits}}   
                     {{/rollWasCrit() wrath}}
                     {{#rollWasFumble() wrath}} 
                         {{#warp1}}<div class="sheet-rt-crits"><span class="sheet-rt-titles">Le Warp frappe :</span><span class="sheet-rt-roll">{{warp1}} {{warp2}}</span></div>{{/warp1}}   
@@ -2293,20 +2301,16 @@
             
         </div>
 
-
     </div>
+
 </rolltemplate>
 
 
 
 
 
-
-
 <!--  SHEET WORKERS  -->
-
-
-
+<button class="sheet-display-none" type="roll" name="roll_crits" value="!rt [[1t[critical-hits]]]"></button>
 
 
 <script type="text/worker">
