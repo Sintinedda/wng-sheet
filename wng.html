@@ -846,9 +846,9 @@
                         <input type="number" class="sheet-input" name="attr_weapon_salvo" value="0" title="@{weapon_salvo}">
                         <select class="sheet-input" name="attr_weapon_type" style="width: 65px;">
                             <option value="0"></option>
-                            <option value="[[@{agility_total}+@{ballistic_skill_total}]]">CT/Agi</option>
-                            <option value="[[@{initiative_total}+@{weapon_skill_total}]]">CC/Init</option>
-                            <option value="[[@{agility_total}+@{weapon_skill_total}]]">CC/Agi</option>
+                            <option value="[[@{ballistic_skill_total}]]">CT/Agi</option>
+                            <option value="[[@{weapon_skill_total}]]">CC/Init</option>
+                            <option value="[[@{agility_total}+@{weapon_skill_base}]]">CC/Agi</option>
                         </select>
                         <input type="number" class="sheet-input sheet-number-fixed" name="attr_weapon_modifier" value="[[@{weapon_type}]]" title="@{weapon_modifier}" disabled>
                         <input type="number" class="sheet-input" name="attr_weapon_attack_ed" value="0" title="@{weapon_attack_ed}">
@@ -915,14 +915,14 @@
                     </fieldset>
 
                     <div class="repcontainer sheet-display-none" data-groupname="repeating_faiths">
-                                <div class="repitem">
-                                    <div class="itemcontrol">
-                                        <button class="btn btn-danger pictos repcontrol_del">#</button>
-                                        <a class="btn repcontrol_move">≡</a>
-                                    </div>
-                                    <!-- my-repeating-section HTML -->
-                                </div>
-                                <!-- there will be a div.repitem for each item the user has actually added to the sheet -->
+                        <div class="repitem">
+                            <div class="itemcontrol">
+                                <button class="btn btn-danger pictos repcontrol_del">#</button>
+                                <a class="btn repcontrol_move">≡</a>
+                            </div>
+                            <!-- my-repeating-section HTML -->
+                        </div>
+                        <!-- there will be a div.repitem for each item the user has actually added to the sheet -->
                     </div>
 
                     <div class="repcontrol sheet-display-none" data-groupname="repeating_faiths">
@@ -953,14 +953,14 @@
                     </fieldset>
 
                     <div class="repcontainer sheet-display-none" data-groupname="repeating_feats">
-                                <div class="repitem">
-                                    <div class="itemcontrol">
-                                        <button class="btn btn-danger pictos repcontrol_del">#</button>
-                                        <a class="btn repcontrol_move">≡</a>
-                                    </div>
-                                    <!-- my-repeating-section HTML -->
-                                </div>
-                                <!-- there will be a div.repitem for each item the user has actually added to the sheet -->
+                        <div class="repitem">
+                            <div class="itemcontrol">
+                                <button class="btn btn-danger pictos repcontrol_del">#</button>
+                                <a class="btn repcontrol_move">≡</a>
+                            </div>
+                            <!-- my-repeating-section HTML -->
+                        </div>
+                        <!-- there will be a div.repitem for each item the user has actually added to the sheet -->
                     </div>
 
                     <div class="repcontrol sheet-display-none" data-groupname="repeating_feats">
@@ -1043,14 +1043,14 @@
                 </fieldset>
 
                 <div class="repcontainer sheet-display-none" data-groupname="repeating_powers">
-                                <div class="repitem">
-                                    <div class="itemcontrol">
-                                        <button class="btn btn-danger pictos repcontrol_del">#</button>
-                                        <a class="btn repcontrol_move">≡</a>
-                                    </div>
-                                    <!-- my-repeating-section HTML -->
-                                </div>
-                                <!-- there will be a div.repitem for each item the user has actually added to the sheet -->
+                    <div class="repitem">
+                        <div class="itemcontrol">
+                            <button class="btn btn-danger pictos repcontrol_del">#</button>
+                            <a class="btn repcontrol_move">≡</a>
+                        </div>
+                        <!-- my-repeating-section HTML -->
+                    </div>
+                    <!-- there will be a div.repitem for each item the user has actually added to the sheet -->
                 </div>
 
                 <div class="repcontrol sheet-display-none" data-groupname="repeating_powers">
@@ -1090,14 +1090,14 @@
                 </fieldset>
 
                 <div class="repcontainer sheet-display-none" data-groupname="repeating_equipments">
-                                <div class="repitem">
-                                    <div class="itemcontrol">
-                                        <button class="btn btn-danger pictos repcontrol_del">#</button>
-                                        <a class="btn repcontrol_move">≡</a>
-                                    </div>
-                                    <!-- my-repeating-section HTML -->
-                                </div>
-                                <!-- there will be a div.repitem for each item the user has actually added to the sheet -->
+                    <div class="repitem">
+                        <div class="itemcontrol">
+                            <button class="btn btn-danger pictos repcontrol_del">#</button>
+                            <a class="btn repcontrol_move">≡</a>
+                        </div>
+                        <!-- my-repeating-section HTML -->
+                    </div>
+                    <!-- there will be a div.repitem for each item the user has actually added to the sheet -->
                 </div>
 
                 <div class="repcontrol sheet-display-none" data-groupname="repeating_equipments">
@@ -1155,14 +1155,14 @@
                 </fieldset>
 
                 <div class="repcontainer sheet-display-none" data-groupname="repeating_vehicles">
-                                <div class="repitem">
-                                    <div class="itemcontrol">
-                                        <button class="btn btn-danger pictos repcontrol_del">#</button>
-                                        <a class="btn repcontrol_move">≡</a>
-                                    </div>
-                                    <!-- my-repeating-section HTML -->
-                                </div>
-                                <!-- there will be a div.repitem for each item the user has actually added to the sheet -->
+                    <div class="repitem">
+                        <div class="itemcontrol">
+                            <button class="btn btn-danger pictos repcontrol_del">#</button>
+                            <a class="btn repcontrol_move">≡</a>
+                        </div>
+                        <!-- my-repeating-section HTML -->
+                    </div>
+                    <!-- there will be a div.repitem for each item the user has actually added to the sheet -->
                 </div>
 
                 <div class="repcontrol sheet-display-none" data-groupname="repeating_vehicles">
@@ -1212,14 +1212,14 @@
                 </fieldset>
 
                 <div class="repcontainer sheet-display-none" data-groupname="repeating_ships">
-                                <div class="repitem">
-                                    <div class="itemcontrol">
-                                        <button class="btn btn-danger pictos repcontrol_del">#</button>
-                                        <a class="btn repcontrol_move">≡</a>
-                                    </div>
-                                    <!-- my-repeating-section HTML -->
-                                </div>
-                                <!-- there will be a div.repitem for each item the user has actually added to the sheet -->
+                    <div class="repitem">
+                        <div class="itemcontrol">
+                            <button class="btn btn-danger pictos repcontrol_del">#</button>
+                            <a class="btn repcontrol_move">≡</a>
+                        </div>
+                        <!-- my-repeating-section HTML -->
+                    </div>
+                    <!-- there will be a div.repitem for each item the user has actually added to the sheet -->
                 </div>
 
                 <div class="repcontrol sheet-display-none" data-groupname="repeating_ships">
@@ -1947,38 +1947,38 @@
 
             <!--  REPEATING SKILLS  -->
             <fieldset class="repeating_npcskills sheet-display-none">
-            <div class="sheet-grid sheet-8 sheet-gridgap-15px sheet-mt-10px">
-                <span class="sheet-colstart"><input type="text" class="sheet-input" name="attr_npcskill" title="@{npcskill}" style="width: 118.52px;"></span>
-                <input type="number" class="sheet-input" name="attr_npcskill_base" value="0" title="@{npcskill_base}">
-                <select class="sheet-input" name="attr_npcskill_attribute" title="@{npcskill_attribute}" style="width: 130px;">
-                    <option value="0" selected></option>
-                    <option value="strength">Force</option>
-                    <option value="toughness">Endurance</option>
-                    <option value="agility">Agilité</option>
-                    <option value="initiative">Initiative</option>
-                    <option value="willpower">Force Mentale</option>
-                    <option value="intelligence">Intelligence</option>
-                    <option value="fellowship">Sociabilité</option>
-                </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_npcskill_attribute_total" title="@{npcskill_attribute_total}" readonly>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_npcskill_total" title="@{npcskill_total}" readonly>
-                <input type="number" class="sheet-input" name="attr_npcskill_ed" value="0" title="@{npcskill_ed}">
-                <div style="width: 42.64px;"><button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de @{npcskill}}} {{dices=[[[[@{npcskill_total}+@{npcskill_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{npcskill_total}+@{npcskill_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button></div>
-                <input type="hidden" name="attr_npcskill_help">
-                <div style="width: 33.23px;"><button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test de @{npcskill}}} {{dices=[[[[@{npcskill_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{npcskill_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button></div>
-                <span class="sheet-gridline"></span>
-            </div>
+                <div class="sheet-grid sheet-8 sheet-gridgap-15px sheet-mt-10px">
+                    <span class="sheet-colstart"><input type="text" class="sheet-input" name="attr_npcskill" title="@{npcskill}" style="width: 118.52px;"></span>
+                    <input type="number" class="sheet-input" name="attr_npcskill_base" value="0" title="@{npcskill_base}">
+                    <select class="sheet-input" name="attr_npcskill_attribute" title="@{npcskill_attribute}" style="width: 130px;">
+                        <option value="0" selected></option>
+                        <option value="strength">Force</option>
+                        <option value="toughness">Endurance</option>
+                        <option value="agility">Agilité</option>
+                        <option value="initiative">Initiative</option>
+                        <option value="willpower">Force Mentale</option>
+                        <option value="intelligence">Intelligence</option>
+                        <option value="fellowship">Sociabilité</option>
+                    </select>
+                    <input type="number" class="sheet-input sheet-number-fixed" name="attr_npcskill_attribute_total" title="@{npcskill_attribute_total}" readonly>
+                    <input type="number" class="sheet-input sheet-number-fixed" name="attr_npcskill_total" title="@{npcskill_total}" readonly>
+                    <input type="number" class="sheet-input" name="attr_npcskill_ed" value="0" title="@{npcskill_ed}">
+                    <div style="width: 42.64px;"><button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de @{npcskill}}} {{dices=[[[[@{npcskill_total}+@{npcskill_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{npcskill_total}+@{npcskill_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button></div>
+                    <input type="hidden" name="attr_npcskill_help">
+                    <div style="width: 33.23px;"><button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test de @{npcskill}}} {{dices=[[[[@{npcskill_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{npcskill_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button></div>
+                    <span class="sheet-gridline"></span>
+                </div>
             </fieldset>
 
             <div class="repcontainer sheet-display-none" data-groupname="repeating_npcskills">
-                    <div class="repitem">
-                        <div class="itemcontrol">
-                            <button class="btn btn-danger pictos repcontrol_del">#</button>
-                            <a class="btn repcontrol_move">≡</a>
-                        </div>
-                        <!-- my-repeating-section HTML -->
+                <div class="repitem">
+                    <div class="itemcontrol">
+                        <button class="btn btn-danger pictos repcontrol_del">#</button>
+                        <a class="btn repcontrol_move">≡</a>
                     </div>
-                    <!-- there will be a div.repitem for each item the user has actually added to the sheet -->
+                    <!-- my-repeating-section HTML -->
+                </div>
+                <!-- there will be a div.repitem for each item the user has actually added to the sheet -->
             </div>
 
             <div class="repcontrol sheet-display-none" data-groupname="repeating_npcskills">
@@ -1992,10 +1992,10 @@
         <div class="sheet-mb-30px">
 
             <div class="sheet-titles">
-                    <div style="position: absolute; margin-top: -2px;">
-                        <input type="checkbox" class="sheet-input" name="attr_psyker" value="[[round(@{willpower_total} / 2) + 2]]" title="@{psyker}">
-                        <span title="Cochez la case si vous avez le Mot-clé PSYKER" style="padding-left: 5px; text-transform: none;">Psyker</span> 
-                    </div>
+                <div style="position: absolute; margin-top: -2px;">
+                    <input type="checkbox" class="sheet-input" name="attr_psyker" value="[[round(@{willpower_total} / 2) + 2]]" title="@{psyker}">
+                    <span title="Cochez la case si vous avez le Mot-clé PSYKER" style="padding-left: 5px; text-transform: none;">Psyker</span> 
+                </div>
                 Armes et Attaques
             </div>
 
@@ -2029,9 +2029,9 @@
                     <input type="number" class="sheet-input" name="attr_weapon_salvo" value="0" title="@{weapon_salvo}">
                     <select class="sheet-input" name="attr_weapon_type" style="width: 65px;">
                         <option value="0"></option>
-                        <option value="[[@{agility_total}+@{ballistic_skill_total}]]">CT/Agi</option>
-                        <option value="[[@{initiative_total}+@{weapon_skill_total}]]">CC/Init</option>
-                        <option value="[[@{agility_total}+@{weapon_skill_total}]]">CC/Agi</option>
+                        <option value="[[@{ballistic_skill_total}]]">CT/Agi</option>
+                        <option value="[[@{weapon_skill_total}]]">CC/Init</option>
+                        <option value="[[@{agility_total}+@{weapon_skill_base}]]">CC/Agi</option>
                     </select>
                     <input type="number" class="sheet-input sheet-number-fixed" name="attr_weapon_modifier" value="[[@{weapon_type}]]" title="@{weapon_modifier}" disabled>
                     <input type="number" class="sheet-input" name="attr_weapon_attack_ed" value="0" title="@{weapon_attack_ed}">
@@ -2086,14 +2086,14 @@
             </fieldset>
 
             <div class="repcontainer sheet-display-none" data-groupname="repeating_feats">
-                        <div class="repitem">
-                            <div class="itemcontrol">
-                                <button class="btn btn-danger pictos repcontrol_del">#</button>
-                                <a class="btn repcontrol_move">≡</a>
-                            </div>
-                            <!-- my-repeating-section HTML -->
-                        </div>
-                        <!-- there will be a div.repitem for each item the user has actually added to the sheet -->
+                <div class="repitem">
+                    <div class="itemcontrol">
+                        <button class="btn btn-danger pictos repcontrol_del">#</button>
+                        <a class="btn repcontrol_move">≡</a>
+                    </div>
+                    <!-- my-repeating-section HTML -->
+                </div>
+                <!-- there will be a div.repitem for each item the user has actually added to the sheet -->
             </div>
 
             <div class="repcontrol sheet-display-none" data-groupname="repeating_feats">
@@ -2174,14 +2174,14 @@
             </fieldset>
 
             <div class="repcontainer sheet-display-none" data-groupname="repeating_powers">
-                            <div class="repitem">
-                                <div class="itemcontrol">
-                                    <button class="btn btn-danger pictos repcontrol_del">#</button>
-                                    <a class="btn repcontrol_move">≡</a>
-                                </div>
-                                <!-- my-repeating-section HTML -->
-                            </div>
-                            <!-- there will be a div.repitem for each item the user has actually added to the sheet -->
+                <div class="repitem">
+                    <div class="itemcontrol">
+                        <button class="btn btn-danger pictos repcontrol_del">#</button>
+                        <a class="btn repcontrol_move">≡</a>
+                    </div>
+                    <!-- my-repeating-section HTML -->
+                </div>
+                <!-- there will be a div.repitem for each item the user has actually added to the sheet -->
             </div>
 
             <div class="repcontrol sheet-display-none" data-groupname="repeating_powers">
