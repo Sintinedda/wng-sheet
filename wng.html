@@ -2360,10 +2360,10 @@
 
 
 /*  CONVICTION CALCULS  */
-    on(`change:toughness_total sheet:opened`, () => {
-        getAttrs([`toughness_total`], v => {
-            const toughness_total = parseInt(v.toughness_total)||0;
-            const conviction_base = toughness_total;
+    on(`change:willpower_total sheet:opened`, () => {
+        getAttrs([`willpower_total`], v => {
+            const willpower_total = parseInt(v.willpower_total)||0;
+            const conviction_base = willpower_total;
             setAttrs({
                 conviction_base: conviction_base
             });
