@@ -115,72 +115,86 @@
 
                             <!--  STRENGTH  -->
                             <input type="hidden" name="attr_strength_name" value="strength">
+                            <input type="hidden" name="attr_strength_namefr" value="Force">
                             <span class="sheet-colstart">Force</span>
                             <input type="number" class="sheet-input" name="attr_strength_base" value="1" min="1" title="@{strength_base}">
                             <input type="number" class="sheet-input" name="attr_strength_bonus" value="0" title="@{strength_bonus}">
                             <input type="number" class="sheet-input sheet-number-fixed" name="attr_strength_total" title="@{strength_total}" readonly>
                             <input type="number" class="sheet-input" name="attr_strength_ed" value="0" title="@{strength_ed}">
-                            <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Force}} {{dices=[[[[@{strength_total}+@{strength_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{strength_total}+@{strength_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}"></button>
+                            <input type="hidden" name="attr_strength_final">
+                            <span><button type="action" class="sheet-roll" name="act_strength"></button></span>
                             <span class="sheet-gridline"></span>
 
                             <!--  TOUGHNESS  -->
                             <input type="hidden" name="attr_toughness_name" value="toughness">
+                            <input type="hidden" name="attr_toughness_namefr" value="Endurance">
                             <span class="sheet-colstart">Endurance</span>
                             <input type="number" class="sheet-input" name="attr_toughness_base" value="1" min="1" title="@{toughness_base}">
                             <input type="number" class="sheet-input" name="attr_toughness_bonus" value="0" title="@{toughness_bonus}">
                             <input type="number" class="sheet-input sheet-number-fixed" name="attr_toughness_total" title="@{toughness_total}" readonly>
                             <input type="number" class="sheet-input" name="attr_toughness_ed" value="0" title="@{toughness_ed}">
-                            <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test d'Endurance}} {{dices=[[[[@{toughness_total}+@{toughness_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{toughness_total}+@{toughness_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}"></button>
+                            <input type="hidden" name="attr_toughness_final">
+                            <span><button type="action" class="sheet-roll" name="act_toughness"></button></span>
                             <span class="sheet-gridline"></span>
 
                             <!--  AGILITY  -->
                             <input type="hidden" name="attr_agility_name" value="agility">
+                            <input type="hidden" name="attr_agility_namefr" value="Agilité">
                             <span class="sheet-colstart">Agilité</span>
                             <input type="number" class="sheet-input" name="attr_agility_base" value="1" min="1" title="@{agility_base}">
                             <input type="number" class="sheet-input" name="attr_agility_bonus" value="0" title="@{agility_bonus}">
                             <input type="number" class="sheet-input sheet-number-fixed" name="attr_agility_total" title="@{agility_total}" readonly>
                             <input type="number" class="sheet-input" name="attr_agility_ed" value="0" title="@{agility_ed}">
-                            <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test d'Agilité}} {{dices=[[[[@{agility_total}+@{agility_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{agility_total}+@{agility_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}"></button>
+                            <input type="hidden" name="attr_agility_final">
+                            <span><button type="action" class="sheet-roll" name="act_agility"></button></span>
                             <span class="sheet-gridline"></span>
 
                             <!--  INITIATIVE  -->
                             <input type="hidden" name="attr_initiative_name" value="initiative">
+                            <input type="hidden" name="attr_initiative_namefr" value="Initiative">
                             <span class="sheet-colstart">Initiative</span>
                             <input type="number" class="sheet-input" name="attr_initiative_base" value="1" min="1" title="@{initiative_base}">
                             <input type="number" class="sheet-input" name="attr_initiative_bonus" value="0" title="@{initiative_bonus}">
                             <input type="number" class="sheet-input sheet-number-fixed" name="attr_initiative_total" title="@{initiative_total}" readonly>
                             <input type="number" class="sheet-input" name="attr_initiative_ed" value="0" title="@{initiative_ed}">
-                            <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test d'Initiative}} {{dices=[[[[@{initiative_total}+@{initiative_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{initiative_total}+@{initiative_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}"></button>
+                            <input type="hidden" name="attr_initiative_final">
+                            <span><button type="action" class="sheet-roll" name="act_initiative"></button></span>
                             <span class="sheet-gridline"></span>
 
                             <!--  WILLPOWER  -->
                             <input type="hidden" name="attr_willpower_name" value="willpower">
+                            <input type="hidden" name="attr_willpower_namefr" value="Force Mentale">
                             <span class="sheet-colstart">Force Mentale</span>
                             <input type="number" class="sheet-input" name="attr_willpower_base" value="1" min="1" title="@{willpower_base}">
                             <input type="number" class="sheet-input" name="attr_willpower_bonus" value="0" title="@{willpower_bonus}">
                             <input type="number" class="sheet-input sheet-number-fixed" name="attr_willpower_total" title="@{willpower_total}" readonly>
                             <input type="number" class="sheet-input" name="attr_willpower_ed" value="0" title="@{willpower_ed}">
-                            <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Force Mentale}} {{dices=[[[[@{willpower_total}+@{willpower_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{willpower_total}+@{willpower_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}"></button>
+                            <input type="hidden" name="attr_willpower_final">
+                            <span><button type="action" class="sheet-roll" name="act_willpower"></button></span>
                             <span class="sheet-gridline"></span>
 
                             <!--  INTELLIGENCE  -->
                             <input type="hidden" name="attr_intelligence_name" value="intelligence">
+                            <input type="hidden" name="attr_intelligence_namefr" value="Intelligence">
                             <span class="sheet-colstart">Intelligence</span>
                             <input type="number" class="sheet-input" name="attr_intelligence_base" value="1" min="1" title="@{intelligence_base}">
                             <input type="number" class="sheet-input" name="attr_intelligence_bonus" value="0" title="@{intelligence_bonus}">
                             <input type="number" class="sheet-input sheet-number-fixed" name="attr_intelligence_total" title="@{intelligence_total}" readonly>
                             <input type="number" class="sheet-input" name="attr_intelligence_ed" value="0" title="@{intelligence_ed}">
-                            <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test d'Intelligence}} {{dices=[[[[@{intelligence_total}+@{intelligence_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{intelligence_total}+@{intelligence_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}"></button>
+                            <input type="hidden" name="attr_intelligence_final">
+                            <span><button type="action" class="sheet-roll" name="act_intelligence"></button></span>
                             <span class="sheet-gridline"></span>
                             
                             <!--  FELLOWSHIP  -->
                             <input type="hidden" name="attr_fellowship_name" value="fellowship">
+                            <input type="hidden" name="attr_fellowship_namefr" value="Sociabilité">
                             <span class="sheet-colstart">Sociabilité</span>
                             <input type="number" class="sheet-input" name="attr_fellowship_base" value="1" min="1" title="@{fellowship_base}">
                             <input type="number" class="sheet-input" name="attr_fellowship_bonus" value="0" title="@{fellowship_bonus}">
                             <input type="number" class="sheet-input sheet-number-fixed" name="attr_fellowship_total" title="@{fellowship_total}" readonly>
                             <input type="number" class="sheet-input" name="attr_fellowship_ed" value="0" title="@{fellowship_ed}">
-                            <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Sociabilité}} {{dices=[[[[@{fellowship_total}+@{fellowship_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{fellowship_total}+@{fellowship_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}"></button>
+                            <input type="hidden" name="attr_fellowship_final">
+                            <span><button type="action" class="sheet-roll" name="act_fellowship"></button></span>
                             <span class="sheet-gridline"></span>
                         </div>
                     </div>
@@ -197,12 +211,14 @@
                             <span class="sheet-gridline"></span>
 
                             <!--  CONVICTION  -->
+                            <input type="hidden" name="attr_conviction_namefr" value="Conviction">
                             <span class="sheet-colstart" title="À utiliser lorsque vous faites un Test de Corruption">Conviction</span>
                             <input type="number" class="sheet-input sheet-number-fixed" name="attr_conviction_base" title="@{conviction_base}" readonly>
                             <input type="number" class="sheet-input" name="attr_conviction_bonus" value="0" title="@{conviction_bonus}">
                             <input type="number" class="sheet-input sheet-number-fixed" name="attr_conviction_total" title="@{conviction_total}" readonly>
                             <input type="number" class="sheet-input" name="attr_conviction_ed" value="0" title="@{conviction_ed}">
-                            <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Conviction pour résister à la Corruption}} {{dices=[[[[@{conviction_total}+@{conviction_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{conviction_total}+@{conviction_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                            <input type="hidden" name="attr_conviction_final">
+                            <span><button type="action" class="sheet-roll" name="act_conviction"></button></span>
                             <span class="sheet-gridline"></span>
 
                             <!--  CORRUPTION -->
@@ -223,21 +239,25 @@
                             <span class="sheet-gridline"></span>
 
                             <!--  RESOLVE -->
+                            <input type="hidden" name="attr_resolve_namefr" value="Résolution">
                             <span class="sheet-colstart" title="Représente votre courage et votre moral.&#x0A;Sert à résister à certaines Conditions psychologiques. ">Résolution</span>
                             <input type="number" class="sheet-input sheet-number-fixed" name="attr_resolve_base" title="@{resolve_base}" readonly>
                             <input type="number" class="sheet-input" name="attr_resolve_bonus" value="0" title="@{resolve_bonus}">
                             <input type="number" class="sheet-input sheet-number-fixed" name="attr_resolve_total" title="@{resolve_total}" readonly>
                             <input type="number" class="sheet-input" name="attr_resolve_ed" value="0" title="@{resolve_ed}">
-                            <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Résolution}} {{dices=[[[[@{resolve_total}+@{resolve_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{resolve_total}+@{resolve_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                            <input type="hidden" name="attr_resolve_final">
+                            <span><button type="action" class="sheet-roll" name="act_resolve"></button></span>
                             <span class="sheet-gridline"></span>
 
                             <!--  INFLUENCE -->
+                            <input type="hidden" name="attr_influence_namefr" value="Influence">
                             <span class="sheet-colstart" title="Représente votre statut social et réputation.&#x0A;Sert pour les Tests visant à jouer de votre autorité et acquérir des objets.">Influence</span>
                             <input type="number" class="sheet-input sheet-number-fixed" name="attr_influence_base" title="@{influence_base}" readonly>
                             <input type="number" class="sheet-input" name="attr_influence_bonus" value="0" title="@{influence_bonus}">
                             <input type="number" class="sheet-input sheet-number-fixed" name="attr_influence_total" title="@{influence_total}" readonly>
                             <input type="number" class="sheet-input" name="attr_influence_ed" value="0" title="@{influence_ed}">
-                            <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test d'Influence}} {{dices=[[[[@{influence_total}+@{influence_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{influence_total}+@{influence_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                            <input type="hidden" name="attr_influence_final">
+                            <span><button type="action" class="sheet-roll" name="act_influence"></button></span>
                             <span class="sheet-gridline"></span>
 
                             <!--  WEALTH -->
@@ -275,6 +295,7 @@
                 <span class="sheet-gridline"></span>
 
                 <!--  ATHLETICS  -->
+                <input type="hidden" name="attr_athletics_namefr" value="Athlétisme">
                 <span class="sheet-colstart">Athlétisme</span>
                 <input type="number" class="sheet-input" name="attr_athletics_base" value="0" title="@{athletics_base}">
                 <select class="sheet-input" name="attr_athletics_attribute" title="@{athletics_attribute}" style="width: 130px;">
@@ -287,18 +308,20 @@
                     <option value="intelligence">Intelligence</option>
                     <option value="fellowship">Sociabilité</option>
                 </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_athletics_attribute_total" title="@{athletics_attribute_total}" readonly>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_athletics_bonus" title="@{athletics_bonus}" readonly>
                 <input type="number" class="sheet-input sheet-number-fixed" name="attr_athletics_total" title="@{athletics_total}" readonly>
                 <input type="number" class="sheet-input" name="attr_athletics_ed" value="0" title="@{athletics_ed}">
-                <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test d'Athlétisme}} {{dices=[[[[@{athletics_total}+@{athletics_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{athletics_total}+@{athletics_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <input type="hidden" name="attr_athletics_final">
+                <span><button type="action" class="sheet-roll" name="act_athletics"></button></span>
                 <input type="hidden" name="attr_athletics_help">
-                <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test d'Athlétisme}} {{dices=[[[[@{athletics_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{athletics_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <span><button type="action" class="sheet-roll sheet-altroll" name="act_athletics_help"></button></span>
                 <span class="sheet-gridline"></span>
 
                 <!--  WEAPON SKILL  -->
+                <input type="hidden" name="attr_weapon_namefr" value="Capacité de Combat">
                 <span class="sheet-colstart">Capacité de Combat</span>
-                <input type="number" class="sheet-input" name="attr_weapon_skill_base" value="0" title="@{weapon_skill_base}">
-                <select class="sheet-input" name="attr_weapon_skill_attribute" title="@{weapon_skill_attribute}" style="width: 130px;">
+                <input type="number" class="sheet-input" name="attr_weapon_base" value="0" title="@{weapon_base}">
+                <select class="sheet-input" name="attr_weapon_attribute" title="@{weapon_attribute}" style="width: 130px;">
                     <option value="0"></option>
                     <option value="strength">Force</option>
                     <option value="toughness">Endurance</option>
@@ -308,18 +331,20 @@
                     <option value="intelligence">Intelligence</option>
                     <option value="fellowship">Sociabilité</option>
                 </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_weapon_skill_attribute_total" title="@{weapon_skill_attribute_total}" readonly>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_weapon_skill_total" title="@{weapon_skill_total}" readonly>
-                <input type="number" class="sheet-input" name="attr_weapon_skill_ed" value="0" title="@{weapon_skill_ed}">
-                <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Capacité de Combat}} {{dices=[[[[@{weapon_skill_total}+@{weapon_skill_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{weapon_skill_total}+@{weapon_skill_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
-                <input type="hidden" name="attr_weapon_skill_help">
-                <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test de Capacité de Combat}} {{dices=[[[[@{weapon_skill_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{weapon_skill_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_weapon_bonus" title="@{weapon_bonus}" readonly>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_weapon_total" title="@{weapon_total}" readonly>
+                <input type="number" class="sheet-input" name="attr_weapon_ed" value="0" title="@{weapon_ed}">
+                <input type="hidden" name="attr_weapon_final">
+                <span><button type="action" class="sheet-roll" name="act_weapon"></button></span>
+                <input type="hidden" name="attr_weapon_help">
+                <span><button type="action" class="sheet-roll sheet-altroll" name="act_weapon_help"></button></span>
                 <span class="sheet-gridline"></span>
 
                 <!--  BALLISTIC SKILL  -->
+                <input type="hidden" name="attr_ballistic_namefr" value="Capacité de Tir">
                 <span class="sheet-colstart">Capacité de Tir</span>
-                <input type="number" class="sheet-input" name="attr_ballistic_skill_base" value="0" title="@{ballistic_skill_base}">
-                <select class="sheet-input" name="attr_ballistic_skill_attribute" title="@{ballistic_skill_attribute}" style="width: 130px;">
+                <input type="number" class="sheet-input" name="attr_ballistic_base" value="0" title="@{ballistic_base}">
+                <select class="sheet-input" name="attr_ballistic_attribute" title="@{ballistic_attribute}" style="width: 130px;">
                     <option value="0"></option>
                     <option value="strength">Force</option>
                     <option value="toughness">Endurance</option>
@@ -329,16 +354,18 @@
                     <option value="intelligence">Intelligence</option>
                     <option value="fellowship">Sociabilité</option>
                 </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_ballistic_skill_attribute_total" title="@{ballistic_skill_attribute_total}" readonly>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_ballistic_skill_total" title="@{ballistic_skill_total}" readonly>
-                <input type="number" class="sheet-input" name="attr_ballistic_skill_ed" value="0" title="@{ballistic_skill_ed}">
-                <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Capacité de Tir}} {{dices=[[[[@{ballistic_skill_total}+@{ballistic_skill_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{ballistic_skill_total}+@{ballistic_skill_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
-                <input type="hidden" name="attr_ballistic_skill_help">
-                <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test de Capacité de Tir}} {{dices=[[[[@{ballistic_skill_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{ballistic_skill_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_ballistic_bonus" title="@{ballistic_bonus}" readonly>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_ballistic_total" title="@{ballistic_total}" readonly>
+                <input type="number" class="sheet-input" name="attr_ballistic_ed" value="0" title="@{ballistic_ed}">
+                <input type="hidden" name="attr_ballistic_final">
+                <span><button type="action" class="sheet-roll" name="act_ballistic"></button></span>
+                <input type="hidden" name="attr_ballistic_help">
+                <span><button type="action" class="sheet-roll sheet-altroll" name="act_ballistic_help"></button></span>
                 <span class="sheet-gridline"></span>
 
                 <!--  LEADERSHIP  -->
-                <span class="sheet-colstart">Leadership</span>
+                <input type="hidden" name="attr_leadership_namefr" value="Commandement">
+                <span class="sheet-colstart">Commandement</span>
                 <input type="number" class="sheet-input" name="attr_leadership_base" value="0" title="@{leadership_base}">
                 <select class="sheet-input" name="attr_leadership_attribute" title="@{leadership_attribute}" style="width: 130px;">
                     <option value="0"></option>
@@ -350,15 +377,17 @@
                     <option value="intelligence">Intelligence</option>
                     <option value="fellowship">Sociabilité</option>
                 </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_leadership_attribute_total" title="@{leadership_attribute_total}" readonly>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_leadership_bonus" title="@{leadership_bonus}" readonly>
                 <input type="number" class="sheet-input sheet-number-fixed" name="attr_leadership_total" title="@{leadership_total}" readonly>
                 <input type="number" class="sheet-input" name="attr_leadership_ed" value="0" title="@{leadership_ed}">
-                <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Leadership}} {{dices=[[[[@{leadership_total}+@{leadership_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{leadership_total}+@{leadership_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <input type="hidden" name="attr_leadership_final">
+                <span><button type="action" class="sheet-roll" name="act_leadership"></button></span>
                 <input type="hidden" name="attr_leadership_help">
-                <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test de Leadership}} {{dices=[[[[@{leadership_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{leadership_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <span><button type="action" class="sheet-roll sheet-altroll" name="act_leadership_help"></button></span>
                 <span class="sheet-gridline"></span>
 
                 <!--  SCHOLAR  -->
+                <input type="hidden" name="attr_scholar_namefr" value="Connaissance">
                 <span class="sheet-colstart">Connaissance</span>
                 <input type="number" class="sheet-input" name="attr_scholar_base" value="0" title="@{scholar_base}">
                 <select class="sheet-input" name="attr_scholar_attribute" title="@{scholar_attribute}" style="width: 130px;">
@@ -371,15 +400,17 @@
                     <option value="intelligence" selected>Intelligence</option>
                     <option value="fellowship">Sociabilité</option>
                 </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_scholar_attribute_total" title="@{scholar_attribute_total}" readonly>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_scholar_bonus" title="@{scholar_bonus}" readonly>
                 <input type="number" class="sheet-input sheet-number-fixed" name="attr_scholar_total" title="@{scholar_total}" readonly>
                 <input type="number" class="sheet-input" name="attr_scholar_ed" value="0" title="@{scholar_ed}">
-                <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Connaissance}} {{dices=[[[[@{scholar_total}+@{scholar_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{scholar_total}+@{scholar_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <input type="hidden" name="attr_scholar_final">
+                <span><button type="action" class="sheet-roll" name="act_scholar"></button></span>
                 <input type="hidden" name="attr_scholar_help">
-                <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test de Connaissance}} {{dices=[[[[@{scholar_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{scholar_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <span><button type="action" class="sheet-roll sheet-altroll" name="act_scholar_help"></button></span>
                 <span class="sheet-gridline"></span>
 
                 <!--  DECEPTION  -->
+                <input type="hidden" name="attr_deception_namefr" value="Duperie">
                 <span class="sheet-colstart">Duperie</span>
                 <input type="number" class="sheet-input" name="attr_deception_base" value="0" title="@{deception_base}">
                 <select class="sheet-input" name="attr_deception_attribute" title="@{deception_attribute}" style="width: 130px;">
@@ -392,15 +423,17 @@
                     <option value="intelligence">Intelligence</option>
                     <option value="fellowship" selected>Sociabilité</option>
                 </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_deception_attribute_total" title="@{deception_attribute_total}" readonly>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_deception_bonus" title="@{deception_bonus}" readonly>
                 <input type="number" class="sheet-input sheet-number-fixed" name="attr_deception_total" title="@{deception_total}" readonly>
                 <input type="number" class="sheet-input" name="attr_deception_ed" value="0" title="@{deception_ed}">
-                <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Duperie}} {{dices=[[[[@{deception_total}+@{deception_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{deception_total}+@{deception_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <input type="hidden" name="attr_deception_final">
+                <span><button type="action" class="sheet-roll" name="act_deception"></button></span>
                 <input type="hidden" name="attr_deception_help">
-                <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test de Duperie}} {{dices=[[[[@{deception_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{deception_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <span><button type="action" class="sheet-roll sheet-altroll" name="act_deception_help"></button></span>
                 <span class="sheet-gridline"></span>
 
                 <!--  STEALTH  -->
+                <input type="hidden" name="attr_stealth_namefr" value="Furtivité">
                 <span class="sheet-colstart">Furtivité</span>
                 <input type="number" class="sheet-input" name="attr_stealth_base" value="0" title="@{stealth_base}">
                 <select class="sheet-input" name="attr_stealth_attribute" title="@{stealth_attribute}" style="width: 130px;">
@@ -413,15 +446,17 @@
                     <option value="intelligence">Intelligence</option>
                     <option value="fellowship">Sociabilité</option>
                 </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_stealth_attribute_total" title="@{stealth_attribute_total}" readonly>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_stealth_bonus" title="@{stealth_bonus}" readonly>
                 <input type="number" class="sheet-input sheet-number-fixed" name="attr_stealth_total" title="@{stealth_total}" readonly>
                 <input type="number" class="sheet-input" name="attr_stealth_ed" value="0" title="@{stealth_ed}">
-                <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Furtivité}} {{dices=[[[[@{stealth_total}+@{stealth_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{stealth_total}+@{stealth_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <input type="hidden" name="attr_stealth_final">
+                <span><button type="action" class="sheet-roll" name="act_stealth"></button></span>
                 <input type="hidden" name="attr_stealth_help">
-                <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test de Furtivité}} {{dices=[[[[@{stealth_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{stealth_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <span><button type="action" class="sheet-roll sheet-altroll" name="act_stealth_help"></button></span>
                 <span class="sheet-gridline"></span>
 
                 <!--  INTIMIDATION  -->
+                <input type="hidden" name="attr_intimidation_namefr" value="Intimidation">
                 <span class="sheet-colstart">Intimidation</span>
                 <input type="number" class="sheet-input" name="attr_intimidation_base" value="0" title="@{intimidation_base}">
                 <select class="sheet-input" name="attr_intimidation_attribute" title="@{intimidation_attribute}" style="width: 130px;">
@@ -434,15 +469,17 @@
                     <option value="intelligence">Intelligence</option>
                     <option value="fellowship">Sociabilité</option>
                 </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_intimidation_attribute_total" title="@{intimidation_attribute_total}" readonly>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_intimidation_bonus" title="@{intimidation_bonus}" readonly>
                 <input type="number" class="sheet-input sheet-number-fixed" name="attr_intimidation_total" title="@{intimidation_total}" readonly>
                 <input type="number" class="sheet-input" name="attr_intimidation_ed" value="0" title="@{intimidation_ed}">
-                <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test d}} {{dices=[[[[@{intimidation_total}+@{intimidation_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{intimidation_total}+@{intimidation_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <input type="hidden" name="attr_intimidation_final">
+                <span><button type="action" class="sheet-roll" name="act_intimidation"></button></span>
                 <input type="hidden" name="attr_intimidation_help">
-                <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test d'Intimidation}} {{dices=[[[[@{intimidation_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{intimidation_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <span><button type="action" class="sheet-roll sheet-altroll" name="act_intimidation_help"></button></span>
                 <span class="sheet-gridline"></span>
                 
                 <!--  INVESTIGATION  -->
+                <input type="hidden" name="attr_investigation_namefr" value="Investigation">
                 <span class="sheet-colstart">Investigation</span>
                 <input type="number" class="sheet-input" name="attr_investigation_base" value="0" title="@{investigation_base}">
                 <select class="sheet-input" name="attr_investigation_attribute" title="@{investigation_attribute}" style="width: 130px;">
@@ -455,18 +492,20 @@
                     <option value="intelligence" selected>Intelligence</option>
                     <option value="fellowship">Sociabilité</option>
                 </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_investigation_attribute_total" title="@{investigation_attribute_total}" readonly>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_investigation_bonus" title="@{investigation_bonus}" readonly>
                 <input type="number" class="sheet-input sheet-number-fixed" name="attr_investigation_total" title="@{investigation_total}" readonly>
                 <input type="number" class="sheet-input" name="attr_investigation_ed" value="0" title="@{investigation_ed}">
-                <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test d'Investigation}} {{dices=[[[[@{investigation_total}+@{investigation_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{investigation_total}+@{investigation_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <input type="hidden" name="attr_investigation_final">
+                <span><button type="action" class="sheet-roll" name="act_investigation"></button></span>
                 <input type="hidden" name="attr_investigation_help">
-                <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test d'Investigation}} {{dices=[[[[@{investigation_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{investigation_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <span><button type="action" class="sheet-roll sheet-altroll" name="act_investigation_help"></button></span>
                 <span class="sheet-gridline"></span>
                 
                 <!--  PSYCHIC MASTERY  -->
+                <input type="hidden" name="attr_psychic_namefr" value="Maîtrise Psychique">
                 <span class="sheet-colstart">Maîtrise Psychique</span>
-                <input type="number" class="sheet-input" name="attr_psychic_mastery_base" value="0" title="@{psychic_mastery_base}">
-                <select class="sheet-input" name="attr_psychic_mastery_attribute" title="@{psychic_mastery_attribute}" style="width: 130px;">
+                <input type="number" class="sheet-input" name="attr_psychic_base" value="0" title="@{psychic_base}">
+                <select class="sheet-input" name="attr_psychic_attribute" title="@{psychic_attribute}" style="width: 130px;">
                     <option value="0"></option>
                     <option value="strength">Force</option>
                     <option value="toughness">Endurance</option>
@@ -476,15 +515,17 @@
                     <option value="intelligence">Intelligence</option>
                     <option value="fellowship">Sociabilité</option>
                 </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_psychic_mastery_attribute_total" title="@{psychic_mastery_attribute_total}" readonly>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_psychic_mastery_total" title="@{psychic_mastery_total}" readonly>
-                <input type="number" class="sheet-input" name="attr_psychic_mastery_ed" value="0" title="@{psychic_mastery_ed}">
-                <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Maîtrise Psychique}} {{dices=[[[[@{psychic_mastery_total}+@{psychic_mastery_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{psychic_mastery_total}+@{psychic_mastery_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
-                <input type="hidden" name="attr_psychic_mastery_help">
-                <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test de Maîtrise Psychique}} {{dices=[[[[@{psychic_mastery_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{psychic_mastery_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_psychic_bonus" title="@{psychic_bonus}" readonly>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_psychic_total" title="@{psychic_total}" readonly>
+                <input type="number" class="sheet-input" name="attr_psychic_ed" value="0" title="@{psychic_ed}">
+                <input type="hidden" name="attr_psychic_final">
+                <span><button type="action" class="sheet-roll" name="act_psychic"></button></span>
+                <input type="hidden" name="attr_psychic_help">
+                <span><button type="action" class="sheet-roll sheet-altroll" name="act_psychic_help"></button></span>
                 <span class="sheet-gridline"></span>
 
                 <!--  MEDICAE  -->
+                <input type="hidden" name="attr_medicae_namefr" value="Mediace">
                 <span class="sheet-colstart">Medicae</span>
                 <input type="number" class="sheet-input" name="attr_medicae_base" value="0" title="@{medicae_base}">
                 <select class="sheet-input" name="attr_medicae_attribute" title="@{medicae_attribute}" style="width: 130px;">
@@ -497,15 +538,17 @@
                     <option value="intelligence" selected>Intelligence</option>
                     <option value="fellowship">Sociabilité</option>
                 </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_medicae_attribute_total" title="@{medicae_attribute_total}" readonly>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_medicae_bonus" title="@{medicae_bonus}" readonly>
                 <input type="number" class="sheet-input sheet-number-fixed" name="attr_medicae_total" title="@{medicae_total}" readonly>
                 <input type="number" class="sheet-input" name="attr_medicae_ed" value="0" title="@{medicae_ed}">
-                <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Medicae}} {{dices=[[[[@{medicae_total}+@{medicae_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{medicae_total}+@{medicae_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <input type="hidden" name="attr_medicae_final">
+                <span><button type="action" class="sheet-roll" name="act_medicae"></button></span>
                 <input type="hidden" name="attr_medicae_help">
-                <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test de Medicae}} {{dices=[[[[@{medicae_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{medicae_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <span><button type="action" class="sheet-roll sheet-altroll" name="act_medicae_help"></button></span>
                 <span class="sheet-gridline"></span>
                 
                 <!--  PERSUASION  -->
+                <input type="hidden" name="attr_persuasion_namefr" value="Persuasion">
                 <span class="sheet-colstart">Persuasion</span>
                 <input type="number" class="sheet-input" name="attr_persuasion_base" value="0" title="@persuasion{_base}">
                 <select class="sheet-input" name="attr_persuasion_attribute" title="@{persuasion_attribute}" style="width: 130px;">
@@ -518,15 +561,17 @@
                     <option value="intelligence">Intelligence</option>
                     <option value="fellowship" selected>Sociabilité</option>
                 </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_persuasion_attribute_total" title="@{persuasion_attribute_total}" readonly>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_persuasion_bonus" title="@{persuasion_bonus}" readonly>
                 <input type="number" class="sheet-input sheet-number-fixed" name="attr_persuasion_total" title="@{persuasion_total}" readonly>
                 <input type="number" class="sheet-input" name="attr_persuasion_ed" value="0" title="@{persuasion_ed}">
-                <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Persuasion}} {{dices=[[[[@{persuasion_total}+@{persuasion_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{persuasion_total}+@{persuasion_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <input type="hidden" name="attr_persuasion_final">
+                <span><button type="action" class="sheet-roll" name="act_persuasion"></button></span>
                 <input type="hidden" name="attr_persuasion_help">
-                <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test de Persuasion}} {{dices=[[[[@{persuasion_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{persuasion_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <span><button type="action" class="sheet-roll sheet-altroll" name="act_persuasion_help"></button></span>
                 <span class="sheet-gridline"></span>
 
                 <!--  PILOT  -->
+                <input type="hidden" name="attr_pilot_namefr" value="Pilotage">
                 <span class="sheet-colstart">Pilotage</span>
                 <input type="number" class="sheet-input" name="attr_pilot_base" value="0" title="@{pilot_base}">
                 <select class="sheet-input" name="attr_pilot_attribute" title="@{pilot_attribute}" style="width: 130px;">
@@ -539,15 +584,17 @@
                     <option value="intelligence">Intelligence</option>
                     <option value="fellowship">Sociabilité</option>
                 </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_pilot_attribute_total" title="@{pilot_attribute_total}" readonly>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_pilot_bonus" title="@{pilot_bonus}" readonly>
                 <input type="number" class="sheet-input sheet-number-fixed" name="attr_pilot_total" title="@{pilot_total}" readonly>
                 <input type="number" class="sheet-input" name="attr_pilot_ed" value="0" title="@{pilot_ed}">
-                <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Pilotage}} {{dices=[[[[@{pilot_total}+@{pilot_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{pilot_total}+@{pilot_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <input type="hidden" name="attr_pilot_final">
+                <span><button type="action" class="sheet-roll" name="act_pilot"></button></span>
                 <input type="hidden" name="attr_pilot_help">
-                <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test de Pilotage}} {{dices=[[[[@{pilot_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{pilot_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <span><button type="action" class="sheet-roll sheet-altroll" name="act_pilot_help"></button></span>
                 <span class="sheet-gridline"></span>
                 
                 <!--  INSIGHT  -->
+                <input type="hidden" name="attr_insight_namefr" value="Psychologie">
                 <span class="sheet-colstart">Psychologie</span>
                 <input type="number" class="sheet-input" name="attr_insight_base" value="0" title="@{insight_base}">
                 <select class="sheet-input" name="attr_insight_attribute" title="@{insight_attribute}" style="width: 130px;">
@@ -560,15 +607,17 @@
                     <option value="intelligence">Intelligence</option>
                     <option value="fellowship" selected>Sociabilité</option>
                 </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_insight_attribute_total" title="@{insight_attribute_total}" readonly>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_insight_bonus" title="@{insight_bonus}" readonly>
                 <input type="number" class="sheet-input sheet-number-fixed" name="attr_insight_total" title="@{insight_total}" readonly>
                 <input type="number" class="sheet-input" name="attr_insight_ed" value="0" title="@{insight_ed}">
-                <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Psychologie}} {{dices=[[[[@{insight_total}+@{insight_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{insight_total}+@{insight_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <input type="hidden" name="attr_insight_final">
+                <span><button type="action" class="sheet-roll" name="act_insight"></button></span>
                 <input type="hidden" name="attr_insight_help">
-                <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test de Psychologie}} {{dices=[[[[@{insight_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{insight_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <span><button type="action" class="sheet-roll sheet-altroll" name="act_insight_help"></button></span>
                 <span class="sheet-gridline"></span>
 
                 <!--  CUNNING  -->
+                <input type="hidden" name="attr_cunning_namefr" value="Ruse">
                 <span class="sheet-colstart">Ruse</span>
                 <input type="number" class="sheet-input" name="attr_cunning_base" value="0" title="@{cunning_base}">
                 <select class="sheet-input" name="attr_cunning_attribute" title="@{cunning_attribute}" style="width: 130px;">
@@ -581,15 +630,17 @@
                     <option value="intelligence">Intelligence</option>
                     <option value="fellowship" selected>Sociabilité</option>
                 </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_cunning_attribute_total" title="@{cunning_attribute_total}" readonly>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_cunning_bonus" title="@{cunning_bonus}" readonly>
                 <input type="number" class="sheet-input sheet-number-fixed" name="attr_cunning_total" title="@{cunning_total}" readonly>
                 <input type="number" class="sheet-input" name="attr_cunning_ed" value="0" title="@{cunning_ed}">
-                <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Ruse}} {{dices=[[[[@{cunning_total}+@{cunning_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{cunning_total}+@{cunning_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <input type="hidden" name="attr_cunning_final">
+                <span><button type="action" class="sheet-roll" name="act_cunning"></button></span>
                 <input type="hidden" name="attr_cunning_help">
-                <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test de Ruse}} {{dices=[[[[@{cunning_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{cunning_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <span><button type="action" class="sheet-roll sheet-altroll" name="act_cunning_help"></button></span>
                 <span class="sheet-gridline"></span>
 
                 <!--  SURVIVAL  -->
+                <input type="hidden" name="attr_survival_namefr" value="Survie">
                 <span class="sheet-colstart">Survie</span>
                 <input type="number" class="sheet-input" name="attr_survival_base" value="0" title="@{survival_base}">
                 <select class="sheet-input" name="attr_survival_attribute" title="@{survival_attribute}" style="width: 130px;">
@@ -602,15 +653,17 @@
                     <option value="intelligence">Intelligence</option>
                     <option value="fellowship">Sociabilité</option>
                 </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_survival_attribute_total" title="@{survival_attribute_total}" readonly>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_survival_bonus" title="@{survival_bonus}" readonly>
                 <input type="number" class="sheet-input sheet-number-fixed" name="attr_survival_total" title="@{survival_total}" readonly>
                 <input type="number" class="sheet-input" name="attr_survival_ed" value="0" title="@{survival_ed}">
-                <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Survie}} {{dices=[[[[@{survival_total}+@{survival_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{survival_total}+@{survival_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <input type="hidden" name="attr_survival_final">
+                <span><button type="action" class="sheet-roll" name="act_survival"></button></span>
                 <input type="hidden" name="attr_survival_help">
-                <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test de Survie}} {{dices=[[[[@{survival_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{survival_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <span><button type="action" class="sheet-roll sheet-altroll" name="act_survival_help"></button></span>
                 <span class="sheet-gridline"></span>
 
                 <!--  TECH  -->
+                <input type="hidden" name="attr_tech_namefr" value="Technomaîtrise">
                 <span class="sheet-colstart">Technomaîtrise</span>
                 <input type="number" class="sheet-input" name="attr_tech_base" value="0" title="@{tech_base}">
                 <select class="sheet-input" name="attr_tech_attribute" title="@{tech_attribute}" style="width: 130px;">
@@ -623,15 +676,17 @@
                     <option value="intelligence" selected>Intelligence</option>
                     <option value="fellowship">Sociabilité</option>
                 </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_tech_attribute_total" title="@{tech_attribute_total}" readonly>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_tech_bonus" title="@{tech_bonus}" readonly>
                 <input type="number" class="sheet-input sheet-number-fixed" name="attr_tech_total" title="@{tech_total}" readonly>
                 <input type="number" class="sheet-input" name="attr_tech_ed" value="0" title="@{tech_ed}">
-                <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Technomaîtrise}} {{dices=[[[[@{tech_total}+@{tech_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{tech_total}+@{tech_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <input type="hidden" name="attr_tech_final">
+                <span><button type="action" class="sheet-roll" name="act_tech"></button></span>
                 <input type="hidden" name="attr_tech_help">
-                <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test de Technomaîtrise}} {{dices=[[[[@{tech_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{tech_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <span><button type="action" class="sheet-roll sheet-altroll" name="act_tech_help"></button></span>
                 <span class="sheet-gridline"></span>
 
                 <!--  AWARENESS  -->
+                <input type="hidden" name="attr_awareness_namefr" value="Vigilance">
                 <span class="sheet-colstart">Vigilance</span>
                 <input type="number" class="sheet-input" name="attr_awareness_base" value="0" title="@{awareness_base}">
                 <select class="sheet-input" name="attr_awareness_attribute" title="@{awareness_attribute}" style="width: 130px;">
@@ -644,12 +699,13 @@
                     <option value="intelligence" selected>Intelligence</option>
                     <option value="fellowship">Sociabilité</option>
                 </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_awareness_attribute_total" title="@{awareness_attribute_total}" readonly>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_awareness_bonus" title="@{awareness_bonus}" readonly>
                 <input type="number" class="sheet-input sheet-number-fixed" name="attr_awareness_total" title="@{awareness_total}" readonly>
                 <input type="number" class="sheet-input" name="attr_awareness_ed" value="0" title="@{awareness_ed}">
-                <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Vigilance}} {{dices=[[[[@{awareness_total}+@{awareness_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{awareness_total}+@{awareness_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <input type="hidden" name="attr_awareness_final">
+                <span><button type="action" class="sheet-roll" name="act_awareness"></button></span>
                 <input type="hidden" name="attr_awareness_help">
-                <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test de Vigilance}} {{dices=[[[[@{awareness_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{awareness_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <span><button type="action" class="sheet-roll sheet-altroll" name="act_awareness_help"></button></span>
                 <span class="sheet-gridline"></span>
 
             </div>
@@ -667,9 +723,9 @@
                     <span class="sheet-gridtitles" title="Dés Supplémentaires pour les Tests d'Initiative et de Détermination">DS</span>
                     <input type="number" class="sheet-input" name="attr_roll_ed" value="0" title="@{roll_ed}">
                     <span class="sheet-gridtitles sheet-bl-1px-green">Initiative</span>
-                    <button type="roll" class="sheet-roll" title="Lancer un Test d'Initiative pour le combat si vous jouez avec cette règle" value="@{whisper}&{template:dicepool} {{name=@{character_name} lance un jet d'Initiative}} {{dices=[[[[@{initiative_total}+@{roll_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{initiative_total}+@{roll_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}"></button>
+                    <span><button type="action" class="sheet-roll" name="act_roll_initiative"></button></span>
                     <span class="sheet-gridtitles sheet-bl-1px-green">Déter</span>
-                    <button type="roll" class="sheet-roll" title="Lancer un Test de Détermination pour convertir Blessures en Stress" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Détermination}} {{dices=[[[[@{determination_total}+@{roll_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{determination_total}+@{roll_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{info=Chaque Icône réduit les Blessures de 1 et augmente le Stress de 1}} {{legend=0}}"></button>
+                    <span><button type="action" class="sheet-roll" name="act_roll_determination" title="Lancer un Test de Détermination pour convertir Blessures en Stress"></button></span>
                     <span class="sheet-gridtitles sheet-bl-5px-silver">Dés</span>
                     <input type="number" class="sheet-input" name="attr_roll_dices" value="1" title="@{roll_dices}">
                     <span class="sheet-gridtitles sheet-bl-1px-green">D3</span>
@@ -687,7 +743,7 @@
                 <div class="sheet-grid sheet-14 sheet-gridgap-10px sheet-mt-10px">
                     <span class="sheet-gridtitles">Furtivité</span>
                     <input type="number" class="sheet-input" name="attr_stealth_current" value="0" title="@{stealth_current}">
-                    <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Furtivité}} {{dices=[[[[@{stealth_total}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{stealth_total}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}"></button>
+                    <span><button type="action" class="sheet-roll" name="act_stealth"></button></span>
                     <span class="sheet-gridtitles sheet-bl-1px-green">Défense</span>
                     <input type="number" class="sheet-input" name="attr_defense_bonus" value="0" title="@{defense_bonus}">
                     <input type="number" class="sheet-input sheet-number-fixed" name="attr_defense_total" title="@{defense_total}" readonly>
@@ -810,7 +866,7 @@
 
                 <div class="sheet-titles">
                         <div style="position: absolute; margin-top: -2px;">
-                            <input type="checkbox" class="sheet-input" name="attr_psyker" value="[[round(@{willpower_total} / 2) + 2]]" title="@{psyker}">
+                            <input type="checkbox" class="sheet-input" name="attr_psyker" value="1" title="@{psyker}">
                             <span title="Cochez la case si vous avez le Mot-clé PSYKER" style="padding-left: 5px; text-transform: none;">Psyker</span> 
                         </div>
                     Armes et Attaques
@@ -837,25 +893,41 @@
                 <fieldset class="repeating_weapons sheet-display-none">
                     <div class="sheet-grid sheet-gridweapons sheet-mt-10px sheet-pb-10px sheet-bb-2px-blue">
                         <input type="text" class="sheet-input sheet-colstart" name="attr_weapon_range" placeholder="Portée..." title="@{weapon_range}" style="width: 70px;">
-                        <input class="sheet-input" type="checkbox" name="attr_weapon_melee" value="[[@{strength_total}]]" title="weapon_melee">
-                        <input class="sheet-input" type="checkbox" name="attr_weapon_force" value="[[@{psyker} - 2]]" title="weapon_force">
+                        <input type="hidden" name="attr_psyker_copy">
+                        <input type="hidden" name="attr_willpower_total_copy">
+                        <input type="hidden" name="attr_strength_total_copy">
+                        <input class="sheet-input" type="checkbox" name="attr_weapon_melee" value="1" title="weapon_melee">
+                        <input class="sheet-input" type="checkbox" name="attr_weapon_force" value="1" title="weapon_force">
                         <input type="number" class="sheet-input" name="attr_weapon_bd" value="0" title="@{weapon_bd}">
-                        <input type="number" class="sheet-input sheet-number-fixed" name="attr_weapon_rd" value="[[@{weapon_bd}+@{weapon_melee}+@{weapon_force}]]" title="@{weapon_rd}" disabled>
+                        <input type="number" class="sheet-input sheet-number-fixed" name="attr_weapon_rd" title="@{weapon_rd}" readonly>
                         <input type="number" class="sheet-input" name="attr_weapon_ed" value="0" title="@{weapon_ed}">
                         <input type="number" class="sheet-input" name="attr_weapon_ap" value="0" title="@{weapon_ap}">
                         <input type="number" class="sheet-input" name="attr_weapon_salvo" value="0" title="@{weapon_salvo}">
                         <select class="sheet-input" name="attr_weapon_type" style="width: 65px;">
                             <option value="0"></option>
-                            <option value="[[@{ballistic_skill_total}]]">CT/Agi</option>
-                            <option value="[[@{weapon_skill_total}]]">CC/Init</option>
-                            <option value="[[@{agility_total}+@{weapon_skill_base}]]">CC/Agi</option>
+                            <option value="1">CT/Agi</option>
+                            <option value="2">CC/Init</option>
+                            <option value="3">CC/Agi</option>
                         </select>
-                        <input type="number" class="sheet-input sheet-number-fixed" name="attr_weapon_modifier" value="[[@{weapon_type}]]" title="@{weapon_modifier}" disabled>
+                        <input type="hidden" name="attr_agility_total_copy">
+                        <input type="hidden" name="attr_initiative_total_copy">
+                        <input type="hidden" name="attr_weapon_base_copy">
+                        <input type="hidden" name="attr_ballistic_base_copy">
+                        <input type="number" class="sheet-input sheet-number-fixed" name="attr_weapon_modifier" title="@{weapon_modifier}" readonly>
                         <input type="number" class="sheet-input" name="attr_weapon_attack_ed" value="0" title="@{weapon_attack_ed}">
-                        <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} met un coup de @{weapon}}} {{dices=[[[[@{weapon_modifier}+@{weapon_attack_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{weapon_modifier}+@{weapon_attack_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{traits=@{weapon_traits}}} {{criticalhits=[Coup Critique!!!](~@{character_name}|crits)}} {{legend=0}}" title="Lancer jet d'attaque"></button>
+                        <button type="action" class="sheet-roll" name="act_attack"></button>
                         <input type="number" class="sheet-input" name="attr_weapon_damage_ed" value="0" title="@{attr_weapon_damage_ed}">
-                        <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} inflige des Dégâts avec @{weapon}}} {{dices=[[[[@{weapon_ed}+@{weapon_damage_ed}]]d6>4cs>6cf<0]]}} {{pool=[[@{weapon_ed}+@{weapon_damage_ed}]]}} {{damage=[[@{weapon_rd}]]}} {{legend=0}}" title="Lancer jet de dégâts"></button>
+                        <button type="action" class="sheet-roll" name="act_damage"></button>
                         <input type="number" class="sheet-input" name="attr_weapon_ammo" value="0" title="@{attr_weapon_ammo}">
+
+                        <span class="sheet-gridtitles">Brutal</span>
+                        <input type="checkbox" class="sheet-input" name="attr_weapon_brutal" value="1">
+                        <span class="sheet-gridtitles sheet-5-7 sheet-bl-1px-green" title="Fusion à Courte portée">Fusion Cp</span>
+                        <input type="checkbox" class="sheet-input sheet-7" name="attr_weapon_fusion" value="1">
+                        <span class="sheet-gridtitles sheet-10-12 sheet-bl-1px-green" title="Fusion à Courte portée contre véhicules ou fortifications">Fusion Cp alt</span>
+                        <input type="checkbox" class="sheet-input sheet-12" name="attr_weapon_fusion2" value="1">
+                        <span class="sheet-gridtitles sheet-14-16 sheet-bl-1px-green">Radiation</span>
+                        <input type="number" class="sheet-input sheet-16" name="attr_weapon_radiation">
 
                         <input type="text" class="sheet-input sheet-2-7" name="attr_weapon" placeholder="Nom..." title="@{weapon}" style="width: 230px;">
                         <input type="text" class="sheet-input sheet-7-17" name="attr_weapon_traits" placeholder="Traits..." title="@{weapon_traits}" style="width: 470px;">
@@ -997,26 +1069,36 @@
                             <span  class="sheet-bl-1px-green" title="Seuil de difficulté">SD</span>
                             <input type="number" class="sheet-input" name="attr_power_dn" value="0" title="@{power_dn}">
                             <span  class="sheet-bl-1px-green" title="Score de Maîtrise psychique">MP</span>
-                            <input type="number" class="sheet-input sheet-number-fixed" name="attr_power_psychic_mastery" value="[[@{psychic_mastery_base}]]" title="@{power_psychic_mastery}" disabled>
+                            <input type="number" class="sheet-input sheet-number-fixed" name="attr_psychic_base_copy" title="@{psychic_base_copy}" readonly>
                             <span  class="sheet-bl-1px-green" title="Choix et Score d'Attribut">Attr</span>
+                            <input type="hidden" name="attr_strength_total_copy">
+                            <input type="hidden" name="attr_toughness_total_copy">
+                            <input type="hidden" name="attr_agility_total_copy">
+                            <input type="hidden" name="attr_initiative_total_copy">
+                            <input type="hidden" name="attr_willpower_total_copy">
+                            <input type="hidden" name="attr_intelligence_total_copy">
+                            <input type="hidden" name="attr_fellowship_total_copy">
                             <select class="sheet-input" name="attr_power_attribute" title="@{power_attribute}" style="width: 100px;">
                                 <option value="0">Aucun</option>
-                                <option value="[[@{strength_total}]]">Force</option>
-                                <option value="[[@{toughness_total}]]">Endurance</option>
-                                <option value="[[@{agility_total}]]">Agilité</option>
-                                <option value="[[@{initiative_total}]]">Initiative</option>
-                                <option value="[[@{willpower_total}]]" selected>Force mentale</option>
-                                <option value="[[@{intelligence_total}]]">Intelligence</option>
-                                <option value="[[@{fellowship_total}]]">Sociabilité</option>
+                                <option value="strength">Force</option>
+                                <option value="toughness">Endurance</option>
+                                <option value="agility">Agilité</option>
+                                <option value="initiative">Initiative</option>
+                                <option value="willpower" selected>Force mentale</option>
+                                <option value="intelligence">Intelligence</option>
+                                <option value="fellowship">Sociabilité</option>
                             </select>
-                            <input type="number" class="sheet-input sheet-number-fixed" name="attr_power_attribute_rating" value="[[@{power_attribute}]]" title="@{power_attribute_rating}" disabled>
+                            <input type="number" class="sheet-input sheet-number-fixed" name="attr_power_attribute_rating" title="@{power_attribute_rating}" readonly>
                         </div>
                         <div class="sheet-flex sheet-jc-spcbtw sheet-ai-center sheet-gap-10px sheet-mb-10px">
                             <span title="Dés d'Attaque bonus">DBA</span>
-                            <input type="number" class="sheet-input" name="attr_power_bd_attack" value="0" title="@{power_bd_attack}">
+                            <input type="number" class="sheet-input" name="attr_power_ed_attack" value="0" title="@{power_ed_attack}">
                             <span  class="sheet-bl-1px-green" title="Dés de Fureur bonus">DBF</span>
-                            <input type="number" class="sheet-input" name="attr_power_bd_wrath" value="0" title="@{power_bd_wrath}">
+                            <input type="number" class="sheet-input" name="attr_power_ed_wrath" value="0" title="@{power_ed_wrath}">
                             <span class="sheet-bl-1px-green" title="Niveau de Surpuissance">Puissance</span>
+                            <input type="hidden" name="attr_tier_copy">
+                            <input type="hidden" name="attr_custom_tier_copy">
+                            <input type="hidden" name="attr_rank_copy">
                             <input type="hidden" name="attr_power_overpowered_statut" readonly>
                             <select class="sheet-input" name="attr_power_overpowered_level" title="@{power_overpowered_level}" style="width: 80px;">
                                 <option value="0">Contrôlé</option>
@@ -1024,14 +1106,14 @@
                                 <option value="2">Déchaîné</option>
                             </select>
                             <input type="hidden" name="attr_power_overpowered" readonly>
-                            <button type="roll" class="sheet-roll" title="Lancer jet d'attaque" value="@{whisper}&{template:dicepool} {{name=@{character_name} lance @{power}}}{{dn=@{power_dn}}} {{overpowered_lvl=@{power_overpowered_statut}}} {{pool=[[@{power_psychic_mastery}+@{power_attribute}+@{power_bd_attack}-1-@{power_bd_wrath}-@{power_overpowered}]]}} {{dices=[[[[@{power_psychic_mastery}+@{power_attribute}+@{power_bd_attack}-1-@{power_bd_wrath}-@{power_overpowered}]]d6>4cs>6cf<0]]}} {{wrath=[[[[1+@{power_bd_wrath}+@{power_overpowered}]]d6>4cs>6cf<1]]}} {{legend=0}} {{warp1=[[1d6]]}} {{warp2=[[1d6]]}} {{keywords=@{power_keywords}}}"></button>
+                            <button type="action" class="sheet-roll" name="act_attack"></button>
                             <span class="sheet-bl-5px-silver" title="Dégâts de base">Dégâts</span>
                             <input type="number" class="sheet-input" name="attr_power_damage" value="0" title="@{power_damage}">
                             <span class="sheet-bl-1px-green" title="Dés de dégâts supplémentaires">DS</span>
                             <input type="number" class="sheet-input" name="attr_power_ed_damage" value="0" title="@{power_ed_damage}">
                             <span class="sheet-bl-1px-green" title="Dés de dégâts bonus">DBD</span>
                             <input type="number" class="sheet-input" name="attr_power_bd_damage" value="0" title="@{power_bd_damage}">
-                            <button type="roll" class="sheet-roll sheet-altroll" title="Lancer jet de dégâts" value="@{whisper}&{template:dicepool} {{name=@{character_name} lance les dégâts de @{power}}} {{pool=[[@{power_ed_damage}+@{power_bd_damage}]]}} {{dices=[[[[@{power_ed_damage}+@{power_bd_damage}]]d6>4cs>6cf<0]]}} {{damage=@{power_damage}}} {{legend=0}}"></button>
+                            <button type="action" class="sheet-roll sheet-altroll" name="act_damage"></button>
                         </div>
                         <div class="sheet-flex sheet-jc-spcbtw sheet-ai-center sheet-gap-10px sheet-mb-10px">
                             <textarea class="sheet-textarea" name="attr_power_effect" placeholder="Effets..." title="@{power_effect}"></textarea>
@@ -1657,72 +1739,86 @@
 
                         <!--  STRENGTH  -->
                         <input type="hidden" name="attr_strength_name" value="strength">
+                        <input type="hidden" name="attr_strength_namefr" value="Force">
                         <span class="sheet-colstart">Force</span>
                         <input type="number" class="sheet-input" name="attr_strength_base" value="1" min="1" title="@{strength_base}">
                         <input type="number" class="sheet-input" name="attr_strength_bonus" value="0" title="@{strength_bonus}">
                         <input type="number" class="sheet-input sheet-number-fixed" name="attr_strength_total" title="@{strength_total}" readonly>
                         <input type="number" class="sheet-input" name="attr_strength_ed" value="0" title="@{strength_ed}">
-                        <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Force}} {{dices=[[[[@{strength_total}+@{strength_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{strength_total}+@{strength_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}"></button>
+                        <input type="hidden" name="attr_strength_final">
+                        <span><button type="action" class="sheet-roll" name="act_strength"></button></span>
                         <span class="sheet-gridline"></span>
 
                         <!--  TOUGHNESS  -->
                         <input type="hidden" name="attr_toughness_name" value="toughness">
+                        <input type="hidden" name="attr_toughness_namefr" value="Endurance">
                         <span class="sheet-colstart">Endurance</span>
                         <input type="number" class="sheet-input" name="attr_toughness_base" value="1" min="1" title="@{toughness_base}">
                         <input type="number" class="sheet-input" name="attr_toughness_bonus" value="0" title="@{toughness_bonus}">
                         <input type="number" class="sheet-input sheet-number-fixed" name="attr_toughness_total" title="@{toughness_total}" readonly>
                         <input type="number" class="sheet-input" name="attr_toughness_ed" value="0" title="@{toughness_ed}">
-                        <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test d'Endurance}} {{dices=[[[[@{toughness_total}+@{toughness_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{toughness_total}+@{toughness_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}"></button>
+                        <input type="hidden" name="attr_toughness_final">
+                        <span><button type="action" class="sheet-roll" name="act_toughness"></button></span>
                         <span class="sheet-gridline"></span>
 
                         <!--  AGILITY  -->
                         <input type="hidden" name="attr_agility_name" value="agility">
+                        <input type="hidden" name="attr_agility_namefr" value="Agilité">
                         <span class="sheet-colstart">Agilité</span>
                         <input type="number" class="sheet-input" name="attr_agility_base" value="1" min="1" title="@{agility_base}">
                         <input type="number" class="sheet-input" name="attr_agility_bonus" value="0" title="@{agility_bonus}">
                         <input type="number" class="sheet-input sheet-number-fixed" name="attr_agility_total" title="@{agility_total}" readonly>
                         <input type="number" class="sheet-input" name="attr_agility_ed" value="0" title="@{agility_ed}">
-                        <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test d'Agilité}} {{dices=[[[[@{agility_total}+@{agility_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{agility_total}+@{agility_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}"></button>
+                        <input type="hidden" name="attr_agility_final">
+                        <span><button type="action" class="sheet-roll" name="act_agility"></button></span>
                         <span class="sheet-gridline"></span>
 
                         <!--  INITIATIVE  -->
                         <input type="hidden" name="attr_initiative_name" value="initiative">
+                        <input type="hidden" name="attr_initiative_namefr" value="Initiative">
                         <span class="sheet-colstart">Initiative</span>
                         <input type="number" class="sheet-input" name="attr_initiative_base" value="1" min="1" title="@{initiative_base}">
                         <input type="number" class="sheet-input" name="attr_initiative_bonus" value="0" title="@{initiative_bonus}">
                         <input type="number" class="sheet-input sheet-number-fixed" name="attr_initiative_total" title="@{initiative_total}" readonly>
                         <input type="number" class="sheet-input" name="attr_initiative_ed" value="0" title="@{initiative_ed}">
-                        <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test d'Initiative}} {{dices=[[[[@{initiative_total}+@{initiative_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{initiative_total}+@{initiative_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}"></button>
+                        <input type="hidden" name="attr_initiative_final">
+                        <span><button type="action" class="sheet-roll" name="act_initiative"></button></span>
                         <span class="sheet-gridline"></span>
 
                         <!--  WILLPOWER  -->
                         <input type="hidden" name="attr_willpower_name" value="willpower">
+                        <input type="hidden" name="attr_willpower_namefr" value="Force Mentale">
                         <span class="sheet-colstart">Force Mentale</span>
                         <input type="number" class="sheet-input" name="attr_willpower_base" value="1" min="1" title="@{willpower_base}">
                         <input type="number" class="sheet-input" name="attr_willpower_bonus" value="0" title="@{willpower_bonus}">
                         <input type="number" class="sheet-input sheet-number-fixed" name="attr_willpower_total" title="@{willpower_total}" readonly>
                         <input type="number" class="sheet-input" name="attr_willpower_ed" value="0" title="@{willpower_ed}">
-                        <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Force Mentale}} {{dices=[[[[@{willpower_total}+@{willpower_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{willpower_total}+@{willpower_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}"></button>
+                        <input type="hidden" name="attr_willpower_final">
+                        <span><button type="action" class="sheet-roll" name="act_willpower"></button></span>
                         <span class="sheet-gridline"></span>
 
                         <!--  INTELLIGENCE  -->
                         <input type="hidden" name="attr_intelligence_name" value="intelligence">
+                        <input type="hidden" name="attr_intelligence_namefr" value="Intelligence">
                         <span class="sheet-colstart">Intelligence</span>
                         <input type="number" class="sheet-input" name="attr_intelligence_base" value="1" min="1" title="@{intelligence_base}">
                         <input type="number" class="sheet-input" name="attr_intelligence_bonus" value="0" title="@{intelligence_bonus}">
                         <input type="number" class="sheet-input sheet-number-fixed" name="attr_intelligence_total" title="@{intelligence_total}" readonly>
                         <input type="number" class="sheet-input" name="attr_intelligence_ed" value="0" title="@{intelligence_ed}">
-                        <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test d'Intelligence}} {{dices=[[[[@{intelligence_total}+@{intelligence_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{intelligence_total}+@{intelligence_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}"></button>
+                        <input type="hidden" name="attr_intelligence_final">
+                        <span><button type="action" class="sheet-roll" name="act_intelligence"></button></span>
                         <span class="sheet-gridline"></span>
                         
                         <!--  FELLOWSHIP  -->
                         <input type="hidden" name="attr_fellowship_name" value="fellowship">
+                        <input type="hidden" name="attr_fellowship_namefr" value="Sociabilité">
                         <span class="sheet-colstart">Sociabilité</span>
                         <input type="number" class="sheet-input" name="attr_fellowship_base" value="1" min="1" title="@{fellowship_base}">
                         <input type="number" class="sheet-input" name="attr_fellowship_bonus" value="0" title="@{fellowship_bonus}">
                         <input type="number" class="sheet-input sheet-number-fixed" name="attr_fellowship_total" title="@{fellowship_total}" readonly>
                         <input type="number" class="sheet-input" name="attr_fellowship_ed" value="0" title="@{fellowship_ed}">
-                        <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Sociabilité}} {{dices=[[[[@{fellowship_total}+@{fellowship_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{fellowship_total}+@{fellowship_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}"></button>
+                        <input type="hidden" name="attr_fellowship_final">
+                        <span><button type="action" class="sheet-roll" name="act_fellowship"></button></span>
                         <span class="sheet-gridline"></span>
 
                     </div>
@@ -1743,12 +1839,14 @@
                         <span class="sheet-gridline"></span>
 
                         <!--  CONVICTION  -->
+                        <input type="hidden" name="attr_conviction_namefr" value="Conviction">
                         <span class="sheet-colstart" title="À utiliser lorsque vous faites un Test de Corruption">Conviction</span>
                         <input type="number" class="sheet-input sheet-number-fixed" name="attr_conviction_base" title="@{conviction_base}" readonly>
                         <input type="number" class="sheet-input" name="attr_conviction_bonus" value="0" title="@{conviction_bonus}">
                         <input type="number" class="sheet-input sheet-number-fixed" name="attr_conviction_total" title="@{conviction_total}" readonly>
                         <input type="number" class="sheet-input" name="attr_conviction_ed" value="0" title="@{conviction_ed}">
-                        <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Conviction pour résister à la Corruption}} {{dices=[[[[@{conviction_total}+@{conviction_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{conviction_total}+@{conviction_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                        <input type="hidden" name="attr_conviction_final">
+                        <span><button type="action" class="sheet-roll" name="act_conviction"></button></span>
                         <span class="sheet-gridline"></span>
 
                         <!--  PASSIVE AWARENESS -->
@@ -1761,12 +1859,14 @@
                         <span class="sheet-gridline"></span>
 
                         <!--  RESOLVE -->
+                        <input type="hidden" name="attr_resolve_namefr" value="Résolution">
                         <span class="sheet-colstart" title="Représente votre courage et votre moral.&#x0A;Sert à résister à certaines Conditions psychologiques. ">Résolution</span>
                         <input type="number" class="sheet-input sheet-number-fixed" name="attr_resolve_base" title="@{resolve_base}" readonly>
                         <input type="number" class="sheet-input" name="attr_resolve_bonus" value="0" title="@{resolve_bonus}">
                         <input type="number" class="sheet-input sheet-number-fixed" name="attr_resolve_total" title="@{resolve_total}" readonly>
                         <input type="number" class="sheet-input" name="attr_resolve_ed" value="0" title="@{resolve_ed}">
-                        <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Résolution}} {{dices=[[[[@{resolve_total}+@{resolve_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{resolve_total}+@{resolve_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                        <input type="hidden" name="attr_resolve_final">
+                        <span><button type="action" class="sheet-roll" name="act_resolve"></button></span>
                         <span class="sheet-gridline"></span>
 
                         <!--  DETERMINATION  -->
@@ -1774,8 +1874,8 @@
                         <span></span>
                         <input type="number" class="sheet-input" name="attr_determination_bonus" value="0" title="@{determination_bonus}">
                         <input type="number" class="sheet-input sheet-number-fixed" name="attr_determination_total" title="@{determination_total}" readonly>
-                        <span></span>
-                        <button type="roll" class="sheet-roll" title="Lancer un Test de Détermination pour convertir Blessures en Stress" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Détermination}} {{dices=[[[[@{determination_total}+@{roll_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{determination_total}+@{roll_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{info=Chaque Icône réduit les Blessures de 1 et augmente le Stress de 1}} {{legend=0}}"></button>
+                        <input type="number" class="sheet-input" name="attr_determination_ed" value="0" title="@{determination_ed}">
+                        <span><button type="action" class="sheet-roll" name="act_roll_determination" title="Lancer un Test de Détermination pour convertir Blessures en Stress"></button></span>
                         <span class="sheet-gridline"></span>
 
                         <!--  DEFENSE  -->
@@ -1839,6 +1939,7 @@
                 <span class="sheet-gridline"></span>
 
                 <!--  DEFAULT  -->
+                <input type="hidden" name="attr_default_namefr" value="Défaut">
                 <span class="sheet-colstart">Défaut</span>
                 <input type="number" class="sheet-input" name="attr_default_base" value="0" title="@{default_base}">
                 <select class="sheet-input" name="attr_default_attribute" title="@{default_attribute}" style="width: 130px;">
@@ -1851,18 +1952,20 @@
                     <option value="intelligence">Intelligence</option>
                     <option value="fellowship">Sociabilité</option>
                 </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_default_attribute_total" title="@{default_attribute_total}" readonly>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_default_bonus" title="@{default_bonus}" readonly>
                 <input type="number" class="sheet-input sheet-number-fixed" name="attr_default_total" title="@{default_total}" readonly>
                 <input type="number" class="sheet-input" name="attr_default_ed" value="0" title="@{default_ed}">
-                <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test par Défaut}} {{dices=[[[[@{default_total}+@{default_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{default_total}+@{default_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <input type="hidden" name="attr_default_final">
+                <span><button type="action" class="sheet-roll" name="act_default"></button></span>
                 <input type="hidden" name="attr_default_help">
-                <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test par Défaut}} {{dices=[[[[@{default_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{default_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <span><button type="action" class="sheet-roll sheet-altroll" name="act_default_help"></button></span>
                 <span class="sheet-gridline"></span>
 
                 <!--  WEAPON SKILL  -->
+                <input type="hidden" name="attr_weapon_namefr" value="Capacité de Combat">
                 <span class="sheet-colstart">Capacité de Combat</span>
-                <input type="number" class="sheet-input" name="attr_weapon_skill_base" value="0" title="@{weapon_skill_base}">
-                <select class="sheet-input" name="attr_weapon_skill_attribute" title="@{weapon_skill_attribute}" style="width: 130px;">
+                <input type="number" class="sheet-input" name="attr_weapon_base" value="0" title="@{weapon_base}">
+                <select class="sheet-input" name="attr_weapon_attribute" title="@{weapon_attribute}" style="width: 130px;">
                     <option value="0"></option>
                     <option value="strength">Force</option>
                     <option value="toughness">Endurance</option>
@@ -1872,18 +1975,20 @@
                     <option value="intelligence">Intelligence</option>
                     <option value="fellowship">Sociabilité</option>
                 </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_weapon_skill_attribute_total" title="@{weapon_skill_attribute_total}" readonly>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_weapon_skill_total" title="@{weapon_skill_total}" readonly>
-                <input type="number" class="sheet-input" name="attr_weapon_skill_ed" value="0" title="@{weapon_skill_ed}">
-                <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Capacité de Combat}} {{dices=[[[[@{weapon_skill_total}+@{weapon_skill_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{weapon_skill_total}+@{weapon_skill_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
-                <input type="hidden" name="attr_weapon_skill_help">
-                <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test de Capacité de Combat}} {{dices=[[[[@{weapon_skill_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{weapon_skill_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_weapon_bonus" title="@{weapon_bonus}" readonly>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_weapon_total" title="@{weapon_total}" readonly>
+                <input type="number" class="sheet-input" name="attr_weapon_ed" value="0" title="@{weapon_ed}">
+                <input type="hidden" name="attr_weapon_final">
+                <span><button type="action" class="sheet-roll" name="act_weapon"></button></span>
+                <input type="hidden" name="attr_weapon_help">
+                <span><button type="action" class="sheet-roll sheet-altroll" name="act_weapon_help"></button></span>
                 <span class="sheet-gridline"></span>
 
                 <!--  BALLISTIC SKILL  -->
+                <input type="hidden" name="attr_ballistic_namefr" value="Capacité de Tir">
                 <span class="sheet-colstart">Capacité de Tir</span>
-                <input type="number" class="sheet-input" name="attr_ballistic_skill_base" value="0" title="@{ballistic_skill_base}">
-                <select class="sheet-input" name="attr_ballistic_skill_attribute" title="@{ballistic_skill_attribute}" style="width: 130px;">
+                <input type="number" class="sheet-input" name="attr_ballistic_base" value="0" title="@{ballistic_base}">
+                <select class="sheet-input" name="attr_ballistic_attribute" title="@{ballistic_attribute}" style="width: 130px;">
                     <option value="0"></option>
                     <option value="strength">Force</option>
                     <option value="toughness">Endurance</option>
@@ -1893,18 +1998,20 @@
                     <option value="intelligence">Intelligence</option>
                     <option value="fellowship">Sociabilité</option>
                 </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_ballistic_skill_attribute_total" title="@{ballistic_skill_attribute_total}" readonly>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_ballistic_skill_total" title="@{ballistic_skill_total}" readonly>
-                <input type="number" class="sheet-input" name="attr_ballistic_skill_ed" value="0" title="@{ballistic_skill_ed}">
-                <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Capacité de Tir}} {{dices=[[[[@{ballistic_skill_total}+@{ballistic_skill_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{ballistic_skill_total}+@{ballistic_skill_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
-                <input type="hidden" name="attr_ballistic_skill_help">
-                <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test de Capacité de Tir}} {{dices=[[[[@{ballistic_skill_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{ballistic_skill_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_ballistic_bonus" title="@{ballistic_bonus}" readonly>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_ballistic_total" title="@{ballistic_total}" readonly>
+                <input type="number" class="sheet-input" name="attr_ballistic_ed" value="0" title="@{ballistic_ed}">
+                <input type="hidden" name="attr_ballistic_final">
+                <span><button type="action" class="sheet-roll" name="act_ballistic"></button></span>
+                <input type="hidden" name="attr_ballistic_help">
+                <span><button type="action" class="sheet-roll sheet-altroll" name="act_ballistic_help"></button></span>
                 <span class="sheet-gridline"></span>
 
                 <!--  PSYCHIC MASTERY  -->
+                <input type="hidden" name="attr_psychic_namefr" value="Maîtrise Psychique">
                 <span class="sheet-colstart">Maîtrise Psychique</span>
-                <input type="number" class="sheet-input" name="attr_psychic_mastery_base" value="0" title="@{psychic_mastery_base}">
-                <select class="sheet-input" name="attr_psychic_mastery_attribute" title="@{psychic_mastery_attribute}" style="width: 130px;">
+                <input type="number" class="sheet-input" name="attr_psychic_base" value="0" title="@{psychic_base}">
+                <select class="sheet-input" name="attr_psychic_attribute" title="@{psychic_attribute}" style="width: 130px;">
                     <option value="0"></option>
                     <option value="strength">Force</option>
                     <option value="toughness">Endurance</option>
@@ -1914,15 +2021,17 @@
                     <option value="intelligence">Intelligence</option>
                     <option value="fellowship">Sociabilité</option>
                 </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_psychic_mastery_attribute_total" title="@{psychic_mastery_attribute_total}" readonly>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_psychic_mastery_total" title="@{psychic_mastery_total}" readonly>
-                <input type="number" class="sheet-input" name="attr_psychic_mastery_ed" value="0" title="@{psychic_mastery_ed}">
-                <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Maîtrise Psychique}} {{dices=[[[[@{psychic_mastery_total}+@{psychic_mastery_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{psychic_mastery_total}+@{psychic_mastery_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
-                <input type="hidden" name="attr_psychic_mastery_help">
-                <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test de Maîtrise Psychique}} {{dices=[[[[@{psychic_mastery_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{psychic_mastery_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_psychic_bonus" title="@{psychic_bonus}" readonly>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_psychic_total" title="@{psychic_total}" readonly>
+                <input type="number" class="sheet-input" name="attr_psychic_ed" value="0" title="@{psychic_ed}">
+                <input type="hidden" name="attr_psychic_final">
+                <span><button type="action" class="sheet-roll" name="act_psychic"></button></span>
+                <input type="hidden" name="attr_psychic_help">
+                <span><button type="action" class="sheet-roll sheet-altroll" name="act_psychic_help"></button></span>
                 <span class="sheet-gridline"></span>
 
                 <!--  AWARENESS  -->
+                <input type="hidden" name="attr_awareness_namefr" value="Vigilance">
                 <span class="sheet-colstart">Vigilance</span>
                 <input type="number" class="sheet-input" name="attr_awareness_base" value="0" title="@{awareness_base}">
                 <select class="sheet-input" name="attr_awareness_attribute" title="@{awareness_attribute}" style="width: 130px;">
@@ -1935,12 +2044,13 @@
                     <option value="intelligence" selected>Intelligence</option>
                     <option value="fellowship">Sociabilité</option>
                 </select>
-                <input type="number" class="sheet-input sheet-number-fixed" name="attr_awareness_attribute_total" title="@{awareness_attribute_total}" readonly>
+                <input type="number" class="sheet-input sheet-number-fixed" name="attr_awareness_bonus" title="@{awareness_bonus}" readonly>
                 <input type="number" class="sheet-input sheet-number-fixed" name="attr_awareness_total" title="@{awareness_total}" readonly>
                 <input type="number" class="sheet-input" name="attr_awareness_ed" value="0" title="@{awareness_ed}">
-                <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Vigilance}} {{dices=[[[[@{awareness_total}+@{awareness_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{awareness_total}+@{awareness_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <input type="hidden" name="attr_awareness_final">
+                <span><button type="action" class="sheet-roll" name="act_awareness"></button></span>
                 <input type="hidden" name="attr_awareness_help">
-                <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test de Vigilance}} {{dices=[[[[@{awareness_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{awareness_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button>
+                <span><button type="action" class="sheet-roll sheet-altroll" name="act_awareness_help"></button></span>
                 <span class="sheet-gridline"></span>
 
             </div>
@@ -1950,6 +2060,13 @@
                 <div class="sheet-grid sheet-8 sheet-gridgap-15px sheet-mt-10px">
                     <span class="sheet-colstart"><input type="text" class="sheet-input" name="attr_npcskill" title="@{npcskill}" style="width: 118.52px;"></span>
                     <input type="number" class="sheet-input" name="attr_npcskill_base" value="0" title="@{npcskill_base}">
+                    <input type="hidden" name="attr_strength_total_copy">
+                    <input type="hidden" name="attr_toughness_total_copy">
+                    <input type="hidden" name="attr_agility_total_copy">
+                    <input type="hidden" name="attr_initiative_total_copy">
+                    <input type="hidden" name="attr_willpower_total_copy">
+                    <input type="hidden" name="attr_intelligence_total_copy">
+                    <input type="hidden" name="attr_fellowship_total_copy">
                     <select class="sheet-input" name="attr_npcskill_attribute" title="@{npcskill_attribute}" style="width: 130px;">
                         <option value="0" selected></option>
                         <option value="strength">Force</option>
@@ -1960,12 +2077,12 @@
                         <option value="intelligence">Intelligence</option>
                         <option value="fellowship">Sociabilité</option>
                     </select>
-                    <input type="number" class="sheet-input sheet-number-fixed" name="attr_npcskill_attribute_total" title="@{npcskill_attribute_total}" readonly>
+                    <input type="number" class="sheet-input sheet-number-fixed" name="attr_npcskill_bonus" title="@{npcskill_bonus}" readonly>
                     <input type="number" class="sheet-input sheet-number-fixed" name="attr_npcskill_total" title="@{npcskill_total}" readonly>
                     <input type="number" class="sheet-input" name="attr_npcskill_ed" value="0" title="@{npcskill_ed}">
-                    <div style="width: 42.64px;"><button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de @{npcskill}}} {{dices=[[[[@{npcskill_total}+@{npcskill_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{npcskill_total}+@{npcskill_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button></div>
+                    <span style="width: 42.65px !important;"><button type="action" class="sheet-roll" name="act_check"></button></span>
                     <input type="hidden" name="attr_npcskill_help">
-                    <div style="width: 33.23px;"><button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test de @{npcskill}}} {{dices=[[[[@{npcskill_help}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{npcskill_help}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{legend=0}}""></button></div>
+                    <span style="width: 33.24px !important;"><button type="action" class="sheet-roll sheet-altroll" name="act_help"></button></span>
                     <span class="sheet-gridline"></span>
                 </div>
             </fieldset>
@@ -2020,25 +2137,41 @@
             <fieldset class="repeating_weapons sheet-display-none">
                 <div class="sheet-grid sheet-gridweapons sheet-mt-10px sheet-pb-10px sheet-bb-2px-blue">
                     <input type="text" class="sheet-input sheet-colstart" name="attr_weapon_range" placeholder="Portée..." title="@{weapon_range}" style="width: 70px;">
-                    <input class="sheet-input" type="checkbox" name="attr_weapon_melee" value="[[@{strength_total}]]" title="weapon_melee">
-                    <input class="sheet-input" type="checkbox" name="attr_weapon_force" value="[[@{psyker} - 2]]" title="weapon_force">
+                    <input type="hidden" name="attr_psyker_copy">
+                    <input type="hidden" name="attr_willpower_total_copy">
+                    <input type="hidden" name="attr_strength_total_copy">
+                    <input class="sheet-input" type="checkbox" name="attr_weapon_melee" value="1" title="weapon_melee">
+                    <input class="sheet-input" type="checkbox" name="attr_weapon_force" value="1" title="weapon_force">
                     <input type="number" class="sheet-input" name="attr_weapon_bd" value="0" title="@{weapon_bd}">
-                    <input type="number" class="sheet-input sheet-number-fixed" name="attr_weapon_rd" value="[[@{weapon_bd}+@{weapon_melee}+@{weapon_force}]]" title="@{weapon_rd}" disabled>
+                    <input type="number" class="sheet-input sheet-number-fixed" name="attr_weapon_rd" title="@{weapon_rd}" readonly>
                     <input type="number" class="sheet-input" name="attr_weapon_ed" value="0" title="@{weapon_ed}">
                     <input type="number" class="sheet-input" name="attr_weapon_ap" value="0" title="@{weapon_ap}">
                     <input type="number" class="sheet-input" name="attr_weapon_salvo" value="0" title="@{weapon_salvo}">
                     <select class="sheet-input" name="attr_weapon_type" style="width: 65px;">
                         <option value="0"></option>
-                        <option value="[[@{ballistic_skill_total}]]">CT/Agi</option>
-                        <option value="[[@{weapon_skill_total}]]">CC/Init</option>
-                        <option value="[[@{agility_total}+@{weapon_skill_base}]]">CC/Agi</option>
+                        <option value="1">CT/Agi</option>
+                        <option value="2">CC/Init</option>
+                        <option value="3">CC/Agi</option>
                     </select>
-                    <input type="number" class="sheet-input sheet-number-fixed" name="attr_weapon_modifier" value="[[@{weapon_type}]]" title="@{weapon_modifier}" disabled>
+                    <input type="hidden" name="attr_agility_total_copy">
+                    <input type="hidden" name="attr_initiative_total_copy">
+                    <input type="hidden" name="attr_weapon_base_copy">
+                    <input type="hidden" name="attr_ballistic_base_copy">
+                    <input type="number" class="sheet-input sheet-number-fixed" name="attr_weapon_modifier" title="@{weapon_modifier}" readonly>
                     <input type="number" class="sheet-input" name="attr_weapon_attack_ed" value="0" title="@{weapon_attack_ed}">
-                    <button type="roll" class="sheet-roll" value="@{whisper}&{template:dicepool} {{name=@{character_name} met un coup de @{weapon}}} {{dices=[[[[@{weapon_modifier}+@{weapon_attack_ed}-1]]d6>4cs>6cf<0]]}} {{pool=[[@{weapon_modifier}+@{weapon_attack_ed}-1]]}} {{wrath=[[1d6>4cs>6cf<1]]}} {{traits=@{weapon_traits}}} {{crit1=[[1d6]]}} {{crit2=[[1d6]]}} {{legend=0}}" title="Lancer jet d'attaque"></button>
+                    <button type="action" class="sheet-roll" name="act_attack"></button>
                     <input type="number" class="sheet-input" name="attr_weapon_damage_ed" value="0" title="@{attr_weapon_damage_ed}">
-                    <button type="roll" class="sheet-roll sheet-altroll" value="@{whisper}&{template:dicepool} {{name=@{character_name} inflige des Dégâts avec @{weapon}}} {{dices=[[[[@{weapon_ed}+@{weapon_damage_ed}]]d6>4cs>6cf<0]]}} {{pool=[[@{weapon_ed}+@{weapon_damage_ed}]]}} {{damage=[[@{weapon_rd}]]}} {{legend=0}}" title="Lancer jet de dégâts"></button>
+                    <button type="action" class="sheet-roll" name="act_damage"></button>
                     <input type="number" class="sheet-input" name="attr_weapon_ammo" value="0" title="@{attr_weapon_ammo}">
+
+                    <span class="sheet-gridtitles">Brutal</span>
+                    <input type="checkbox" class="sheet-input" name="attr_weapon_brutal" value="1">
+                    <span class="sheet-gridtitles sheet-5-7 sheet-bl-1px-green" title="Fusion à Courte portée">Fusion Cp</span>
+                    <input type="checkbox" class="sheet-input sheet-7" name="attr_weapon_fusion" value="1">
+                    <span class="sheet-gridtitles sheet-10-12 sheet-bl-1px-green" title="Fusion à Courte portée contre véhicules ou fortifications">Fusion Cp alt</span>
+                    <input type="checkbox" class="sheet-input sheet-12" name="attr_weapon_fusion2" value="1">
+                    <span class="sheet-gridtitles sheet-14-16 sheet-bl-1px-green">Radiation</span>
+                    <input type="number" class="sheet-input sheet-16" name="attr_weapon_radiation">
 
                     <input type="text" class="sheet-input sheet-2-7" name="attr_weapon" placeholder="Nom..." title="@{weapon}" style="width: 230px;">
                     <input type="text" class="sheet-input sheet-7-17" name="attr_weapon_traits" placeholder="Traits..." title="@{weapon_traits}" style="width: 470px;">
@@ -2128,26 +2261,36 @@
                         <span  class="sheet-bl-1px-green" title="Seuil de difficulté">SD</span>
                         <input type="number" class="sheet-input" name="attr_power_dn" value="0" title="@{power_dn}">
                         <span  class="sheet-bl-1px-green" title="Score de Maîtrise psychique">MP</span>
-                        <input type="number" class="sheet-input sheet-number-fixed" name="attr_power_psychic_mastery" value="[[@{psychic_mastery_base}]]" title="@{power_psychic_mastery}" disabled>
+                        <input type="number" class="sheet-input sheet-number-fixed" name="attr_psychic_base_copy" title="@{psychic_base_copy}" readonly>
                         <span  class="sheet-bl-1px-green" title="Choix et Score d'Attribut">Attr</span>
+                        <input type="hidden" name="attr_strength_total_copy">
+                        <input type="hidden" name="attr_toughness_total_copy">
+                        <input type="hidden" name="attr_agility_total_copy">
+                        <input type="hidden" name="attr_initiative_total_copy">
+                        <input type="hidden" name="attr_willpower_total_copy">
+                        <input type="hidden" name="attr_intelligence_total_copy">
+                        <input type="hidden" name="attr_fellowship_total_copy">
                         <select class="sheet-input" name="attr_power_attribute" title="@{power_attribute}" style="width: 100px;">
                             <option value="0">Aucun</option>
-                            <option value="[[@{strength_total}]]">Force</option>
-                            <option value="[[@{toughness_total}]]">Endurance</option>
-                            <option value="[[@{agility_total}]]">Agilité</option>
-                            <option value="[[@{initiative_total}]]">Initiative</option>
-                            <option value="[[@{willpower_total}]]" selected>Force mentale</option>
-                            <option value="[[@{intelligence_total}]]">Intelligence</option>
-                            <option value="[[@{fellowship_total}]]">Sociabilité</option>
+                            <option value="strength">Force</option>
+                            <option value="toughness">Endurance</option>
+                            <option value="agility">Agilité</option>
+                            <option value="initiative">Initiative</option>
+                            <option value="willpower" selected>Force mentale</option>
+                            <option value="intelligence">Intelligence</option>
+                            <option value="fellowship">Sociabilité</option>
                         </select>
-                        <input type="number" class="sheet-input sheet-number-fixed" name="attr_power_attribute_rating" value="[[@{power_attribute}]]" title="@{power_attribute_rating}" disabled>
+                        <input type="number" class="sheet-input sheet-number-fixed" name="attr_power_attribute_rating" title="@{power_attribute_rating}" readonly>
                     </div>
                     <div class="sheet-flex sheet-jc-spcbtw sheet-ai-center sheet-gap-10px sheet-mb-10px">
                         <span title="Dés d'Attaque bonus">DBA</span>
-                        <input type="number" class="sheet-input" name="attr_power_bd_attack" value="0" title="@{power_bd_attack}">
+                        <input type="number" class="sheet-input" name="attr_power_ed_attack" value="0" title="@{power_ed_attack}">
                         <span  class="sheet-bl-1px-green" title="Dés de Fureur bonus">DBF</span>
-                        <input type="number" class="sheet-input" name="attr_power_bd_wrath" value="0" title="@{power_bd_wrath}">
+                        <input type="number" class="sheet-input" name="attr_power_ed_wrath" value="0" title="@{power_ed_wrath}">
                         <span class="sheet-bl-1px-green" title="Niveau de Surpuissance">Puissance</span>
+                        <input type="hidden" name="attr_tier_copy">
+                        <input type="hidden" name="attr_custom_tier_copy">
+                        <input type="hidden" name="attr_rank_copy">
                         <input type="hidden" name="attr_power_overpowered_statut" readonly>
                         <select class="sheet-input" name="attr_power_overpowered_level" title="@{power_overpowered_level}" style="width: 80px;">
                             <option value="0">Contrôlé</option>
@@ -2155,14 +2298,14 @@
                             <option value="2">Déchaîné</option>
                         </select>
                         <input type="hidden" name="attr_power_overpowered" readonly>
-                        <button type="roll" class="sheet-roll" title="Lancer jet d'attaque" value="@{whisper}&{template:dicepool} {{name=@{character_name} lance @{power}}}{{dn=@{power_dn}}} {{overpowered_lvl=@{power_overpowered_statut}}} {{pool=[[@{power_psychic_mastery}+@{power_attribute}+@{power_bd_attack}-1-@{power_bd_wrath}-@{power_overpowered}]]}} {{dices=[[[[@{power_psychic_mastery}+@{power_attribute}+@{power_bd_attack}-1-@{power_bd_wrath}-@{power_overpowered}]]d6>4cs>6cf<0]]}} {{wrath=[[[[1+@{power_bd_wrath}+@{power_overpowered}]]d6>4cs>6cf<1]]}} {{legend=0}} {{warp1=[[1d6]]}} {{warp2=[[1d6]]}} {{keywords=@{power_keywords}}}"></button>
+                        <button type="action" class="sheet-roll" name="act_attack"></button>
                         <span class="sheet-bl-5px-silver" title="Dégâts de base">Dégâts</span>
                         <input type="number" class="sheet-input" name="attr_power_damage" value="0" title="@{power_damage}">
                         <span class="sheet-bl-1px-green" title="Dés de dégâts supplémentaires">DS</span>
                         <input type="number" class="sheet-input" name="attr_power_ed_damage" value="0" title="@{power_ed_damage}">
                         <span class="sheet-bl-1px-green" title="Dés de dégâts bonus">DBD</span>
                         <input type="number" class="sheet-input" name="attr_power_bd_damage" value="0" title="@{power_bd_damage}">
-                        <button type="roll" class="sheet-roll sheet-altroll" title="Lancer jet de dégâts" value="@{whisper}&{template:dicepool} {{name=@{character_name} lance les dégâts de @{power}}} {{pool=[[@{power_ed_damage}+@{power_bd_damage}]]}} {{dices=[[[[@{power_ed_damage}+@{power_bd_damage}]]d6>4cs>6cf<0]]}} {{damage=@{power_damage}}} {{legend=0}}"></button>
+                        <button type="action" class="sheet-roll sheet-altroll" name="act_damage"></button>
                     </div>
                     <div class="sheet-flex sheet-jc-spcbtw sheet-ai-center sheet-gap-10px sheet-mb-10px">
                         <textarea class="sheet-textarea" name="attr_power_effect" placeholder="Effets..." title="@{power_effect}"></textarea>
@@ -2275,9 +2418,10 @@
 
                 <div class="sheet-rt-rolls">
                     {{#pool}}<div><span class="sheet-rt-titles">Pool de dés :</span><span class="sheet-rt-roll">{{pool}}</span>D6</div>{{/pool}}
-                    {{#dices}}<div><span class="sheet-rt-titles">Icônes :</span><span class="sheet-rt-roll">{{dices}}</span></div>{{/dices}}
-                    {{#wrath}}<div><span class="sheet-rt-titles">Dé(s) de Fureur :</span><span class="sheet-rt-roll">{{wrath}}</span></div>{{/wrath}}
-                    {{#damage}}<div><span class="sheet-rt-titles">Dégâts de base :</span><span class="sheet-rt-roll">{{damage}}</span></div>{{/damage}}
+                    {{#dices}}<div><span class="sheet-rt-titles">Lancer :</span><span class="sheet-rt-roll">{{computed::dices}}</span></div>{{/dices}}
+                    {{#wrath}}<div><span class="sheet-rt-titles">Dé(s) de Fureur :</span><span class="sheet-rt-roll">{{computed::wrath}}</span></div>{{/wrath}}
+                    {{#icons}}<div><span class="sheet-rt-titles">Icônes :</span><span class="sheet-rt-roll">{{computed::icons}}</span></div>{{/icons}}
+                    {{#damage}}<div><span class="sheet-rt-titles">Dégâts total :</span><span class="sheet-rt-roll">{{computed::damage}}</span></div>{{/damage}}
                     {{#result}}<div><span class="sheet-rt-titles">Résultat :</span><span class="sheet-rt-roll">{{result}} {{result2}}</span></div>{{/result}}
                 </div>
 
@@ -2285,9 +2429,11 @@
                     {{#legend}}<div><span class="sheet-rt-important">Les 6 comptent pour 2 Icônes.</span></div>{{/legend}}   
                     {{#info}}<div><span class="sheet-rt-titles">{{info}}</span></div>{{/info}}  
                     {{#rollWasCrit() wrath}} 
+                        {{#critic}}<div class="sheet-rt-crits"><span class="sheet-rt-titles">Fureur critique :</span>+ 1 Gloire</div>{{/critic}}   
                         {{#criticalhits}}<div class="sheet-rt-crits"><span class="sheet-rt-roll">{{criticalhits}}</span></div>{{/criticalhits}}   
                     {{/rollWasCrit() wrath}}
                     {{#rollWasFumble() wrath}} 
+                        {{#fumble}}<div class="sheet-rt-crits"><span class="sheet-rt-titles">Complication</span></div>{{/fumble}}   
                         {{#warp1}}<div class="sheet-rt-crits"><span class="sheet-rt-titles">Le Warp frappe :</span><span class="sheet-rt-roll">{{warp1}} {{warp2}}</span></div>{{/warp1}}   
                     {{/rollWasFumble() wrath}}
                     {{#keywords}}<div><span class="sheet-rt-titles">Mots-clés :</span>{{keywords}}</div>{{/keywords}}   
@@ -2316,9 +2462,14 @@
 <script type="text/worker">
 
     const buttonlist = ["pcattr", "pcskill", "pccombat", "pcpower", "pcequipment", "pcpersonal", "pcprogression"];
+    const items = ["strength", "toughness", "agility", "initiative", "willpower", "intelligence", "fellowship", "conviction", "passive_awareness", "resolve", "influence", "wealth", "athletics", "weapon", "ballistic", "leadership", "scholar", "deception", "stealth", "intimidation", "investigation", "psychic", "medicae", "persuasion", "pilot", "insight", "cunning", "survival", "tech", "awareness", "default"];
     const stats = ["strength", "toughness", "agility", "initiative", "willpower", "intelligence", "fellowship"];
-    const traits = ["conviction", "passive_awareness", "resolve", "influence", "wealth"];
-    const skills = ["athletics", "weapon_skill", "ballistic_skill", "leadership", "scholar", "deception", "stealth", "intimidation", "investigation", "psychic_mastery", "medicae", "persuasion", "pilot", "insight", "cunning", "survival", "tech", "awareness", "default"];
+    const skills = ["athletics", "weapon", "ballistic", "leadership", "scholar", "deception", "stealth", "intimidation", "investigation", "psychic", "medicae", "persuasion", "pilot", "insight", "cunning", "survival", "tech", "awareness", "default"];
+    const repeatingCopies = {
+        weapons: ["agility_total", "initiative_total", "weapon_base", "ballistic_base", "psyker", "willpower_total", "strength_total"],
+        powers: ["tier", "custom_tier", "rank", "psychic_base", "strength_total", "toughness_total", "agility_total", "initiative_total", "willpower_total", "intelligence_total", "fellowship_total"],
+        npcskills: ["strength_total", "toughness_total", "agility_total", "initiative_total", "willpower_total", "intelligence_total", "fellowship_total"],
+    };
 
     buttonlist.forEach(button => {
         on(`clicked:${button}`, () => {
@@ -2329,30 +2480,18 @@
     });
 
 
-/*  STATS CALCULS  */
-    stats.forEach(stat => {
-        on(`change:${stat}_base change:${stat}_bonus sheet:opened`, () => {
-            getAttrs([`${stat}_base`, `${stat}_bonus`], v => {
-                const stat_base = parseInt(v[`${stat}_base`])||0;
-                const stat_bonus = parseInt(v[`${stat}_bonus`])||0;
-                const stat_total = stat_base + stat_bonus;
+/*  ITEMS CALCULS  */
+    items.forEach(item => {
+        on(`change:${item}_base change:${item}_bonus change:${item}_ed sheet:opened`, () => {
+            getAttrs([`${item}_base`, `${item}_bonus`, `${item}_ed`], v => {
+                const item_base = parseInt(v[`${item}_base`])||0;
+                const item_bonus = parseInt(v[`${item}_bonus`])||0;
+                const item_ed = parseInt(v[`${item}_ed`])||0;
+                const item_total = item_base + item_bonus;
+                const item_final = item_total + item_ed;
                 setAttrs({
-                    [`${stat}_total`]: stat_total
-                });
-            });
-        });
-    });
-
-
-/*  TRAITS CALCULS  */
-    traits.forEach(trait => {
-        on(`change:${trait}_base change:${trait}_bonus sheet:opened`, () => {
-            getAttrs([`${trait}_base`, `${trait}_bonus`], v => {
-                const trait_base = parseInt(v[`${trait}_base`])||0;
-                const trait_bonus = parseInt(v[`${trait}_bonus`])||0;
-                const trait_total = trait_base + trait_bonus;
-                setAttrs({
-                    [`${trait}_total`]: trait_total
+                    [`${item}_total`]: item_total,
+                    [`${item}_final`]: item_final
                 });
             });
         });
@@ -2461,32 +2600,28 @@
     stats.forEach(stat => {
         skills.forEach(skill => {
             on(`change:${stat}_total change:${skill}_base change:${skill}_attribute sheet:opened`, () => {
-                getAttrs([`${stat}_name`, `${stat}_total`, `${skill}_base`, `${skill}_attribute`], v => {
+                getAttrs([`${stat}_name`, `${stat}_total`, `${skill}_base`, `${skill}_attribute`, `${skill}_ed`], v => {
                     const stat_name = (v[`${stat}_name`]);
                     const stat_total = parseInt(v[`${stat}_total`])||0;
                     const skill_base = parseInt(v[`${skill}_base`])||0;
                     const skill_attribute = (v[`${skill}_attribute`]);
-                    let skill_attribute_total = 0;
-                    let skill_total = 0;
+                    const skill_ed = parseInt(v[`${skill}_ed`])||0;
+                    let skill_bonus = 0;
                     let skill_help = 0;
                     if (stat_name === skill_attribute) {
-                        skill_attribute_total = stat_total;
-                        skill_total = stat_total + skill_base;
-                        if (skill_base >= stat_total) skill_help = skill_base;
-                        else skill_help = stat_total;
+                        skill_bonus = stat_total;
+                        if (skill_base >= stat_total) skill_help = skill_base + skill_ed;
+                        else skill_help = stat_total + skill_ed;
                         setAttrs({
-                            [`${skill}_attribute_total`]: skill_attribute_total,
-                            [`${skill}_total`]: skill_total,
+                            [`${skill}_bonus`]: skill_bonus,
                             [`${skill}_help`]: skill_help,
                         });
                     } else if (skill_attribute === "0") {
-                        skill_attribute_total = 0;
-                        skill_total = skill_base;
-                        skill_help = skill_base;
+                        skill_bonus = 0;
+                        skill_help = skill_base + skill_ed;
                         setAttrs({
-                            [`${skill}_attribute_total`]: skill_attribute_total,
-                            [`${skill}_total`]: skill_total,
-                            [`${skill}_help`]: skill_help,
+                            [`${skill}_bonus`]: skill_bonus,
+                            [`${skill}_help`]: skill_help
                         });
                     };
                 });
@@ -2495,36 +2630,28 @@
     });
 
     stats.forEach(stat => {
-        on(`change:${stat}_total change:repeating_npcskills:npcskill_base change:repeating_npcskills:npcskill_attribute`, () => {
-            getAttrs([`${stat}_name`, `${stat}_total`, `repeating_npcskills_npcskill_base`, `repeating_npcskills_npcskill_attribute`], v => {
-                const stat_name = (v[`${stat}_name`]);
-                const stat_total = parseInt(v[`${stat}_total`])||0;
-                const npcskill_base = parseInt(v[`repeating_npcskills_npcskill_base`])||0;
-                const npcskill_attribute = (v[`repeating_npcskills_npcskill_attribute`]);
-                let npcskill_attribute_total = 0;
-                let npcskill_total = 0;
+        on(`change:repeating_npcskills:strength_total_copy change:repeating_npcskills:toughness_total_copy change:repeating_npcskills:agility_total_copy change:repeating_npcskills:initiative_total_copy change:repeating_npcskills:willpower_total_copy change:repeating_npcskills:intelligence_total_copy change:repeating_npcskills:fellowship_total_copy change:repeating_npcskills:npcskill_base change:repeating_npcskills:npcskill_attribute`, () => {
+            getAttrs([`repeating_npcskills_strength_total_copy`, `repeating_npcskills_toughness_total_copy`, `repeating_npcskills_agility_total_copy`, `repeating_npcskills_initiative_total_copy`, `repeating_npcskills_willpower_total_copy`, `repeating_npcskills_intelligence_total_copy`, `repeating_npcskills_fellowship_total_copy`, `repeating_npcskills_npcskill_base`, `repeating_npcskills_npcskill_attribute`], v => {  
+                const npcskill_base = parseInt(v.repeating_npcskills_npcskill_base)||0;
+                const npcskill_attribute = v.repeating_npcskills_npcskill_attribute;
+                let npcskill_bonus = 0;
+                if (npcskill_attribute === "strength") npcskill_bonus = parseInt(v.repeating_npcskills_strength_total_copy)||0;
+                else if (npcskill_attribute === "toughness") npcskill_bonus = parseInt(v.repeating_npcskills_toughness_total_copy)||0;
+                else if (npcskill_attribute === "agility") npcskill_bonus = parseInt(v.repeating_npcskills_agility_total_copy)||0;
+                else if (npcskill_attribute === "initiative") npcskill_bonus = parseInt(v.repeating_npcskills_initiative_total_copy)||0;
+                else if (npcskill_attribute === "willpower") npcskill_bonus = parseInt(v.repeating_npcskills_willpower_total_copy)||0;
+                else if (npcskill_attribute === "intelligence") npcskill_bonus = parseInt(v.repeating_npcskills_intelligence_total_copy)||0;
+                else if (npcskill_attribute === "fellowship") npcskill_bonus = parseInt(v.repeating_npcskills_fellowship_total_copy)||0;
+                else if (npcskill_attribute === "0") npcskill_bonus = 0;
+                const npcskill_total = npcskill_base + npcskill_bonus;
                 let npcskill_help = 0;
-                console.log();
-                if (stat_name === npcskill_attribute) {
-                    npcskill_attribute_total = stat_total;
-                    npcskill_total = stat_total + npcskill_base;
-                    if (npcskill_base >= stat_total) npcskill_help = npcskill_base;
-                    else npcskill_help = stat_total;
-                    setAttrs({
-                        repeating_npcskills_npcskill_attribute_total: npcskill_attribute_total,
-                        repeating_npcskills_npcskill_total: npcskill_total,
-                        repeating_npcskills_npcskill_help: npcskill_help,
-                    });
-                } else if (npcskill_attribute === "0") {
-                    npcskill_attribute_total = 0;
-                    npcskill_total = npcskill_base;
-                    npcskill_help = npcskill_base;
-                    setAttrs({
-                        repeating_npcskills_npcskill_attribute_total: npcskill_attribute_total,
-                        repeating_npcskills_npcskill_total: npcskill_total,
-                        repeating_npcskills_npcskill_help: npcskill_help,
-                    });
-                };
+                if (npcskill_base >= npcskill_bonus) npcskill_help = npcskill_base;
+                else npcskill_help = npcskill_bonus;
+                setAttrs({
+                    repeating_npcskills_npcskill_bonus: npcskill_bonus,
+                    repeating_npcskills_npcskill_total: npcskill_total,
+                    repeating_npcskills_npcskill_help: npcskill_help,
+                });
             });
         });
     });
@@ -2558,7 +2685,7 @@
 
 
 /*  DETERMINATION CALCULS  */
-    on(`change:toughness_total change:determination_bonus`, () => {
+    on(`change:toughness_total change:determination_bonus sheet:opened`, () => {
         getAttrs([`toughness_total`, `determination_bonus`], v => {
             const toughness_total = parseInt(v.toughness_total)||0;
             const determination_bonus = parseInt(v.determination_bonus)||0;
@@ -2623,12 +2750,84 @@
     });
 
 
+/*  PSYKER CALCULS  */
+    on(`change:repeating_weapons:psyker_copy change:repeating_weapons:willpower_total_copy change:repeating_wepapons:strength_total_copy change:repeating_weapons:weapon_melee change:repeating_weapons:weapon_force change:repeating_weapons:weapon_bd`, () => {
+        getAttrs([`repeating_weapons_strength_total_copy`, `repeating_weapons_willpower_total_copy`, `repeating_weapons_psyker_copy`, `repeating_weapons_weapon_melee`, `repeating_weapons_weapon_force`, `repeating_weapons_weapon_bd`], v => {
+            const strength_total = parseInt(v.repeating_weapons_strength_total_copy)||0;
+            const willpower_total = parseInt(v.repeating_weapons_willpower_total_copy)||0;
+            const psyker = v.repeating_weapons_psyker_copy;
+            const weapon_melee = v.repeating_weapons_weapon_melee;
+            const weapon_force = v.repeating_weapons_weapon_force;
+            const weapon_bd = parseInt(v.repeating_weapons_weapon_bd)||0;
+            let weapon_rd = 0;
+            if (weapon_melee === "1") {
+                weapon_rd = weapon_bd + strength_total;
+                if (weapon_force === "1") {
+                    if (psyker === "1") weapon_rd = Math.round(willpower_total / 2) + weapon_rd;
+                    else if (psyker === "0") weapon_rd = weapon_rd - 2;
+                } else if (weapon_force === "0") weapon_rd = weapon_rd
+            } else if (weapon_melee === "0") {
+                weapon_rd = weapon_bd;
+                if (weapon_force === "1") {
+                    if (psyker === "1") weapon_rd = Math.round(willpower_total / 2) + weapon_rd;
+                    else if (psyker === "0") weapon_rd = weapon_rd - 2;
+                } else if (weapon_force === "0") weapon_rd = weapon_rd
+            };
+            setAttrs({
+                repeating_weapons_weapon_rd: weapon_rd
+            });
+        });
+    });
+
+
+/*  WEAPONS CALCULS  */
+    on(`change:repeating_weapons:agility_total_copy change:repeating_weapons:initiative_total_copy change:repeating_weapons:weapon_base_copy change:repeating_weapons:ballistic_base_copy change:repeating_weapons:weapon_type`, () => {
+        getAttrs([`repeating_weapons_agility_total_copy`, `repeating_weapons_initiative_total_copy`, `repeating_weapons_weapon_base_copy`, `repeating_weapons_ballistic_base_copy`, `repeating_weapons_weapon_type`], v => {
+            const agility_total = parseInt(v.repeating_weapons_agility_total_copy)||0;
+            const initiative_total = parseInt(v.repeating_weapons_initiative_total_copy)||0;
+            const weapon_base = parseInt(v.repeating_weapons_weapon_base_copy)||0;
+            const ballistic_base = parseInt(v.repeating_weapons_ballistic_base_copy)||0;
+            const weapon_type = v.repeating_weapons_weapon_type;
+            let weapon_modifier = 0;
+            if (weapon_type === "0") weapon_modifier = 0;
+            else if (weapon_type === "1") weapon_modifier = agility_total + ballistic_base;
+            else if (weapon_type === "2") weapon_modifier = initiative_total + weapon_base;
+            else if (weapon_type === "3") weapon_modifier = agility_total + weapon_base;
+            setAttrs({
+                repeating_weapons_weapon_modifier: weapon_modifier
+            });
+        });
+    });
+
+
 /* POWER CALCULS */
-    on(`change:tier change:rank change:repeating_powers:power_overpowered_level`, () => {
-        getAttrs([`tier`, `rank`, `repeating_powers_power_overpowered_level`], v => {
-            const tier = parseInt(v.tier)||0;
-            const rank = parseInt(v.rank)||0;
-            const power_overpowered_level = (v[`repeating_powers_power_overpowered_level`]);
+    on(`change:repeating_powers:strength_total_copy change:repeating_powers:toughness_total_copy change:repeating_powers:agility_total_copy change:repeating_powers:initiative_total_copy change:repeating_powers:willpower_total_copy change:repeating_powers:intelligence_total_copy change:repeating_powers:fellowship_total_copy change:repeating_powers:power_attribute`, () => {
+        getAttrs([`repeating_powers_strength_total_copy`, `repeating_powers_toughness_total_copy`, `repeating_powers_agility_total_copy`, `repeating_powers_initiative_total_copy`, `repeating_powers_willpower_total_copy`, `repeating_powers_intelligence_total_copy`, `repeating_powers_fellowship_total_copy`, `repeating_powers_power_attribute`], v => {
+            const power_attribute = v.repeating_powers_power_attribute;
+            let power_attribute_rating = 0;
+            if (power_attribute === "strength") power_attribute_rating = parseInt(v.repeating_powers_strength_total_copy)||0;
+            else if (power_attribute === "toughness") power_attribute_rating = parseInt(v.repeating_powers_toughness_total_copy)||0;
+            else if (power_attribute === "agility") power_attribute_rating = parseInt(v.repeating_powers_agility_total_copy)||0;
+            else if (power_attribute === "initiative") power_attribute_rating = parseInt(v.repeating_powers_initiative_total_copy)||0;
+            else if (power_attribute === "willpower") power_attribute_rating = parseInt(v.repeating_powers_willpower_total_copy)||0;
+            else if (power_attribute === "intelligence") power_attribute_rating = parseInt(v.repeating_powers_intelligence_total_copy)||0;
+            else if (power_attribute === "fellowship") power_attribute_rating = parseInt(v.repeating_powers_fellowship_total_copy)||0;
+            else if (power_attribute === "0") power_attribute_rating = 0;
+            setAttrs({
+                repeating_powers_power_attribute_rating: power_attribute_rating
+            });
+        });
+    });
+
+
+    on(`change:repeating_powers:tier_copy change:repeating_powers:custom_tier_copy change:repeating_powers:rank_copy change:repeating_powers:psychic_base_copy change:repeating_powers:power_overpowered_level`, () => {
+        getAttrs([`repeating_powers_tier_copy`, `repeating_powers_custom_tier_copy`, `repeating_powers_rank_copy`, `repeating_powers_psychic_base_copy`, `repeating_powers_power_overpowered_level`], v => {
+            const tier = parseInt(v.repeating_powers_tier_copy)||0;
+            const custom_tier = parseInt(v.repeating_powers_custom_tier_copy)||0;
+            const rank = parseInt(v.repeating_powers_rank_copy)||0;
+            const psychic_base = parseInt(v.repeating_powers_psychic_base_copy)||0;
+            const power_overpowered_level = v.repeating_powers_power_overpowered_level;
+            const power_psychic = psychic_base;
             let power_overpowered = 0;
             let power_overpowered_statut = "-";
             if (power_overpowered_level === "0") {
@@ -2639,10 +2838,16 @@
                 power_overpowered_statut = "Incontrôlé";
             } else if (power_overpowered_level === "2") {
                 power_overpowered_statut = "Déchaîné";
-                if (tier >= rank ) power_overpowered = tier;
-                else power_overpowered = rank;
+                if (tier > 0 ) {
+                    if (tier >= rank) power_overpowered = tier;
+                    else power_overpowered = rank;
+                } else {
+                    if (custom_tier >= rank) powert_overpowered = custom_tier;
+                    else power_overpowered = rank;
+                };
             };
             setAttrs({
+                repeating_powers_power_psychic: power_psychic,
                 repeating_powers_power_overpowered: power_overpowered,
                 repeating_powers_power_overpowered_statut: power_overpowered_statut
             });
@@ -2650,12 +2855,13 @@
     });
 
 
+
+
 /*  XP CALCULS  */
     on(`change:xp_start change:xp change:xp_start_spent change:xp_spent sheet-opened`, () => {
         getAttrs([`xp_start`, `xp`, `xp_start_spent`, `xp_spent`], v => {
             const xp_start = parseInt(v.xp_start)||0;
             const xp = parseInt(v.xp)||0;
-            console.log(xp_start);
             const xp_start_spent = parseInt(v.xp_start_spent)||0;
             const xp_spent = parseInt(v.xp_spent)||0;
             const xp_total = xp_start + xp;
@@ -2669,6 +2875,21 @@
         });
     });
 
+
+/*  REPEATING COPIES  */
+    Object.keys(repeatingCopies).forEach(section => {
+        repeatingCopies[section].forEach(copy => {
+            on(`change:${copy} sheet:opened`, () => {
+                getAttrs([copy], v => {
+                    getSectionIDs(`repeating_${section}`, ids => {
+                    const output = {};
+                    ids.forEach(id => output[`repeating_${section}_${id}_${copy}_copy`] = v[copy]);
+                    setAttrs(output);
+                    });
+                });
+            });
+        });
+    });
 
 
 
@@ -2705,5 +2926,367 @@ destinations = the name of the attribute that stores the total quantity
     on(`change:repeating_missions:mission_xp remove:repeating_missions sheet:opened`, () => {
         repeatingSum("xp", "missions", "mission_xp");
     })
+
+
+
+/*  ROLL PARSING  */
+    const rollers = ["strength", "toughness", "agility", "initiative", "willpower", "intelligence", "fellowship", "conviction", "resolve", "influence", "athletics", "weapon", "ballistic", "leadership", "scholar", "deception", "stealth", "intimidation", "investigation", "psychic", "medicae", "persuasion", "pilot", "insight", "cunning", "survival", "tech", "awareness", "default"];
+
+
+    rollers.forEach(roller => {
+        on(`clicked:${roller}`, () => {
+            getAttrs([`${roller}_namefr`, `${roller}_final`], v => {
+                const roller_namefr = v[`${roller}_namefr`];
+                const roller_final = parseInt(v[`${roller}_final`])||0;
+                const roll_string = `@{whisper}&{template:dicepool} {{name=@{character_name} fait un test : ${roller_namefr}}} {{pool=[[${roller_final}]]}} {{dices=[[[[${roller_final}-1]]d6]]}} {{wrath=[[1d6cs>6cf<1]]}} {{icons=[[0]]}} {{fumble=0}} {{critic=0}}`;
+                startRoll(roll_string, roll => {
+                    const dices = roll.results.dices.dice;
+                    const wraths = roll.results.wrath.dice;
+                    let iconsd = 0;
+                    let iconsw = 0;
+                    dices.forEach(dice => {
+                        if (dice === 6) iconsd = iconsd + 2;
+                        else if (dice === 4 || dice === 5) iconsd = iconsd + 1;
+                    });
+                    wraths.forEach(wrath => {
+                        if (wrath === 6) iconsw = iconsw + 2;
+                        else if (wrath === 4 || wrath === 5) iconsw = iconsw + 1;
+                    })
+                    const icons = iconsd + iconsw;
+                    finishRoll(roll.rollId, {
+                        dices: iconsd,
+                        wrath: iconsw,
+                        icons: icons
+                    });
+                });
+            });
+        });
+    });
+
+
+    skills.forEach(skill => {
+        on(`clicked:${skill}_help`, () => {
+            getAttrs([`${skill}_help`, `${skill}_namefr`], v => {
+                const skill_namefr = v[`${skill}_namefr`];
+                const skill_help = parseInt(v[`${skill}_help`])||0;
+                const roll_string = `@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test : ${skill_namefr}}} {{pool=[[${skill_help}]]}} {{dices=[[[[${skill_help}-1]]d6]]}} {{wrath=[[1d6cs>6cf<1]]}} {{icons=[[0]]}} {{fumble=0}} {{critic=0}}`;
+                startRoll(roll_string, roll => {
+                    const dices = roll.results.dices.dice;
+                    const wraths = roll.results.wrath.dice;
+                    let iconsd = 0;
+                    let iconsw = 0;
+                    dices.forEach(dice => {
+                        if (dice === 6) iconsd = iconsd + 2;
+                        else if (dice === 4 || dice === 5) iconsd = iconsd + 1;
+                    });
+                    wraths.forEach(wrath => {
+                        if (wrath === 6) iconsw = iconsw + 2;
+                        else if (wrath === 4 || wrath === 5) iconsw = iconsw + 1;
+                    })
+                    const icons = iconsd + iconsw;
+                    finishRoll(roll.rollId, {
+                        dices: iconsd,
+                        wrath: iconsw,
+                        icons: icons
+                    });
+                });
+            });
+        });
+    });
+
+
+    on(`clicked:roll_initiative`, () => {
+        getAttrs([`initiative_total`, `roll_ed`], v => {
+            const initiative_total = parseInt(v.initiative_total)||0;
+            const roll_ed = parseInt(v.roll_ed)||0;
+            const roll_string = `@{whisper}&{template:dicepool} {{name=@{character_name} lance un jet d'Initiative}} {{pool=[[${initiative_total}+${roll_ed}]]}} {{dices=[[[[${initiative_total}+${roll_ed}-1]]d6]]}} {{wrath=[[1d6cs>6cf<1]]}} {{icons=[[0]]}} {{fumble=0}} {{critic=0}}`;
+            startRoll(roll_string, roll => {
+                const dices = roll.results.dices.dice;
+                const wraths = roll.results.wrath.dice;
+                let iconsd = 0;
+                let iconsw = 0;
+                dices.forEach(dice => {
+                    if (dice === 6) iconsd = iconsd + 2;
+                    else if (dice === 4 || dice === 5) iconsd = iconsd + 1;
+                });
+                wraths.forEach(wrath => {
+                    if (wrath === 6) iconsw = iconsw + 2;
+                    else if (wrath === 4 || wrath === 5) iconsw = iconsw + 1;
+                })
+                const icons = iconsd + iconsw;
+                finishRoll(roll.rollId, {
+                    dices: iconsd,
+                    wrath: iconsw,
+                    icons: icons
+                });
+            });
+        });
+    });
+
+
+    on(`clicked:roll_determination`, () => {
+        getAttrs([`determination_total`, `roll_ed`, `determination_ed`], v => {
+            const determination_total = parseInt(v.determination_total)||0;
+            const roll_ed = parseInt(v.roll_ed)||0;
+            const determination_ed = parseInt(v.determination_ed)||0;
+            const determination_final = determination_total + determination_ed + roll_ed;
+            const roll_string = `@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de Détermination}} {{pool=[[${determination_final}]]}} {{dices=[[[[${determination_final}-1]]d6]]}} {{wrath=[[1d6cs>6cf<1]]}} {{icons=[[0]]}} {{fumble=0}} {{critic=0}} {{info=Chaque Icône réduit les Blessures de 1 et augmente le Stress de 1}}`;
+            startRoll(roll_string, roll => {
+                const dices = roll.results.dices.dice;
+                const wraths = roll.results.wrath.dice;
+                let iconsd = 0;
+                let iconsw = 0;
+                dices.forEach(dice => {
+                    if (dice === 6) iconsd = iconsd + 2;
+                    else if (dice === 4 || dice === 5) iconsd = iconsd + 1;
+                });
+                wraths.forEach(wrath => {
+                    if (wrath === 6) iconsw = iconsw + 2;
+                    else if (wrath === 4 || wrath === 5) iconsw = iconsw + 1;
+                })
+                const icons = iconsd + iconsw;
+                finishRoll(roll.rollId, {
+                    dices: iconsd,
+                    wrath: iconsw,
+                    icons: icons
+                });
+            });
+        });
+    });
+
+
+    on(`clicked:repeating_weapons:attack`, () => {
+        getAttrs([`repeating_weapons_weapon`, `repeating_weapons_weapon_modifier`, `repeating_weapons_weapon_attack_ed`, `repeating_weapons_weapon_traits`], v => {
+            const weapon = v.repeating_weapons_weapon;
+            const weapon_modifier = parseInt(v.repeating_weapons_weapon_modifier)||0;
+            const weapon_attack_ed = parseInt(v.repeating_weapons_weapon_attack_ed)||0;
+            const weapon_traits = v.repeating_weapons_weapon_traits;
+            const weapon_final = weapon_modifier + weapon_attack_ed;
+            const roll_string = `@{whisper}&{template:dicepool} {{name=@{character_name} met un coup de ${weapon}}} {{pool=[[${weapon_final}]]}} {{dices=[[[[${weapon_final}-1]]d6]]}} {{wrath=[[1d6cs>6cf<1]]}} {{icons=[[0]]}} {{fumble=0}} {{critic=0}} {{criticalhits=[Coup Critique!!!](~@{character_name}|crits)}} {{traits=${weapon_traits}}}`;
+            startRoll(roll_string, roll => {
+                const dices = roll.results.dices.dice;
+                const wraths = roll.results.wrath.dice;
+                let iconsd = 0;
+                let iconsw = 0;
+                dices.forEach(dice => {
+                    if (dice === 6) iconsd = iconsd + 2;
+                    else if (dice === 4 || dice === 5) iconsd = iconsd + 1;
+                });
+                wraths.forEach(wrath => {
+                    if (wrath === 6) iconsw = iconsw + 2;
+                    else if (wrath === 4 || wrath === 5) iconsw = iconsw + 1;
+                })
+                const icons = iconsd + iconsw;
+                finishRoll(roll.rollId, {
+                    dices: iconsd,
+                    wrath: iconsw,
+                    icons: icons
+                });
+            });
+        });
+    });
+    
+    
+    on(`clicked:repeating_weapons:attack`, () => {
+        getAttrs([`repeating_weapons_weapon`, `repeating_weapons_weapon_modifier`, `repeating_weapons_weapon_attack_ed`, `repeating_weapons_weapon_traits`], v => {
+            const weapon = v.repeating_weapons_weapon;
+            const weapon_modifier = parseInt(v.repeating_weapons_weapon_modifier)||0;
+            const weapon_attack_ed = parseInt(v.repeating_weapons_weapon_attack_ed)||0;
+            const weapon_traits = v.repeating_weapons_weapon_traits;
+            const weapon_final = weapon_modifier + weapon_attack_ed;
+            const roll_string = `@{whisper}&{template:dicepool} {{name=@{character_name} met un coup de ${weapon}}} {{pool=[[${weapon_final}]]}} {{dices=[[[[${weapon_final}-1]]d6]]}} {{wrath=[[1d6cs>6cf<1]]}} {{icons=[[0]]}} {{fumble=0}} {{critic=0}} {{criticalhits=[Coup Critique!!!](~@{character_name}|crits)}} {{traits=${weapon_traits}}}`;
+            startRoll(roll_string, roll => {
+                const dices = roll.results.dices.dice;
+                const wraths = roll.results.wrath.dice;
+                let iconsd = 0;
+                let iconsw = 0;
+                dices.forEach(dice => {
+                    if (dice === 6) iconsd = iconsd + 2;
+                    else if (dice === 4 || dice === 5) iconsd = iconsd + 1;
+                });
+                wraths.forEach(wrath => {
+                    if (wrath === 6) iconsw = iconsw + 2;
+                    else if (wrath === 4 || wrath === 5) iconsw = iconsw + 1;
+                })
+                const icons = iconsd + iconsw;
+                finishRoll(roll.rollId, {
+                    dices: iconsd,
+                    wrath: iconsw,
+                    icons: icons
+                });
+            });
+        });
+    });
+    
+    
+    on(`clicked:repeating_weapons:damage`, () => {
+        getAttrs([`repeating_weapons_weapon`, `repeating_weapons_weapon_ed`, `repeating_weapons_weapon_rd`, `repeating_weapons_weapon_damage_ed`, `repeating_weapons_weapon_brutal`, `repeating_weapons_weapon_fusion`, `repeating_weapons_weapon_fusion2`, `repeating_weapons_weapon_radiation`], v => {
+            const weapon = v.repeating_weapons_weapon;
+            const weapon_ed = parseInt(v.repeating_weapons_weapon_ed)||0;
+            const weapon_rd = parseInt(v.repeating_weapons_weapon_rd)||0;
+            const weapon_damage_ed = parseInt(v.repeating_weapons_weapon_damage_ed)||0;
+            const weapon_brutal = v.repeating_weapons_weapon_brutal;
+            const weapon_fusion = v.repeating_weapons_weapon_fusion;
+            const weapon_fusion2 = v.repeating_weapons_weapon_fusion2;
+            const weapon_radiation = parseInt(v.repeating_weapons_weapon_radiation)||0;
+            const weapon_damage = weapon_ed + weapon_damage_ed;
+            const roll_string = `@{whisper}&{template:dicepool} {{name=@{character_name} inflige des Dégâts avec ${weapon}}} {{pool=[[${weapon_damage}]]}} {{dices=[[[[${weapon_damage}]]d6]]}} {{damage=[[0]]}}`;
+            startRoll(roll_string, roll => {
+                const dices = roll.results.dices.dice;
+                let iconsd = 0;
+                dices.forEach(dice => {
+                    if (weapon_brutal == 1 || weapon_fusion == 1) {
+                        if (dice >= 5) iconsd = iconsd + 2;
+                        else if (dice == 3 || dice == 4) iconsd = iconsd + 1;
+                    } else if (weapon_fusion2 == 1) {
+                        if (dice >= 4) iconsd = iconsd + 2;
+                        else if (dice <= 3) iconsd = iconsd + 1;
+                    } else if (weapon_radiation >= 1) {
+                        const dice_radiant = dice + weapon_radiation;
+                        if (dice_radiant >= 6) iconsd = iconsd + 2;
+                        else if (dice_radiant === 4 || dice_radiant === 5) iconsd = iconsd + 1;
+                    } else if (weapon_brutal == 0 && weapon_fusion == 0 && weapon_fusion2 == 0 && weapon_radiation == 0) {
+                        if (dice === 6) iconsd = iconsd + 2;
+                        else if (dice === 4 || dice === 5) iconsd = iconsd + 1;
+                    };
+                });
+                const weapon_damage_final = iconsd + weapon_rd;
+                finishRoll(roll.rollId, {
+                    dices: iconsd,
+                    damage: weapon_damage_final
+                });
+            });
+        });
+    });
+
+
+    on(`clicked:repeating_powers:attack`, () => {
+        getAttrs([`repeating_powers_power`, `repeating_powers_power_dn`, `repeating_powers_power_overpowered_statut`, `repeating_powers_psychic_base_copy`, `repeating_powers_power_attribute_rating`, `repeating_powers_power_ed_attack`, `repeating_powers_power_ed_wrath`, `repeating_powers_power_overpowered`, `repeating_powers_power_keywords`], v => {
+            const power = v.repeating_powers_power;
+            const power_dn = parseInt(v.repeating_powers_power_dn)||0;
+            const power_overpowered_statut = v.repeating_powers_power_overpowered_statut;
+            const psychic_base = parseInt(v.repeating_powers_psychic_base_copy)||0;
+            const power_attribute_rating = parseInt(v.repeating_powers_power_attribute_rating)||0;
+            const power_ed_attack = parseInt(v.repeating_powers_power_ed_attack)||0;
+            const power_ed_wrath = parseInt(v.repeating_powers_power_ed_wrath)||0;
+            const power_overpowered = parseInt(v.repeating_powers_power_overpowered)||0;
+            const power_keywords = v.repeating_powers_power_keywords;
+            const power_attack = psychic_base + power_attribute_rating + power_ed_attack;
+            let power_wrath = 1 + power_ed_wrath + power_overpowered;
+            let power_attack_final = 0;
+            if (power_wrath <= power_attack) power_attack_final = power_attack - power_wrath;
+            else {
+                power_wrath = power_attack;
+                power_attack_final =0;
+            };
+            const roll_string = `@{whisper}&{template:dicepool} {{name=@{character_name} lance ${power}}}{{dn=${power_dn}}} {{overpowered_lvl=${power_overpowered_statut}}} {{pool=[[${power_attack}]]}} {{dices=[[[[${power_attack_final}]]d6]]}} {{wrath=[[[[${power_wrath}]]d6cf<1]]}} {{icons=[[0]]}} {{warp1=[[1d6]]}} {{warp2=[[1d6]]}} {{keywords=${power_keywords}}}`;
+            startRoll(roll_string, roll => {
+                const dices = roll.results.dices.dice;
+                const wraths = roll.results.wrath.dice;
+                let iconsd = 0;
+                let iconsw = 0;
+                dices.forEach(dice => {
+                    if (dice === 6) iconsd = iconsd + 2;
+                    else if (dice === 4 || dice === 5) iconsd = iconsd + 1;
+                });
+                wraths.forEach(wrath => {
+                    if (wrath === 6) iconsw = iconsw + 2;
+                    else if (wrath === 4 || wrath === 5) iconsw = iconsw + 1;
+                })
+                const icons = iconsd + iconsw;
+                finishRoll(roll.rollId, {
+                    dices: iconsd,
+                    wrath: iconsw,
+                    icons: icons
+                });
+            });
+        });
+    });
+
+
+    on(`clicked:repeating_powers:damage`, () => {
+        getAttrs([`repeating_powers_power`, `repeating_powers_power_ed_damage`, `repeating_powers_power_bd_damage`, `repeating_powers_power_damage`], v => {
+            const power = v.repeating_powers_power;
+            const power_ed = parseInt(v.repeating_powers_power_ed_damage)||0;
+            const power_bd = parseInt(v.repeating_powers_power_bd_damage)||0;
+            const power_damage_base = parseInt(v.repeating_powers_power_damage)||0;
+            const power_damage = power_ed + power_bd;
+            const roll_string = `@{whisper}&{template:dicepool} {{name=@{character_name} lance les dégâts de ${power}}} {{pool=[[${power_damage}]]}} {{dices=[[[[${power_damage}]]d6]]}} {{damage=[[0]]}}`;
+            startRoll(roll_string, roll => {
+                const dices = roll.results.dices.dice;
+                let iconsd = 0;
+                dices.forEach(dice => {
+                    if (dice === 6) iconsd = iconsd + 2;
+                    else if (dice === 5 || dice === 4) iconsd = iconsd + 1;
+                });
+                const power_damage_final = iconsd + power_damage_base;
+                finishRoll(roll.rollId, {
+                    dices: iconsd,
+                    damage: power_damage_final
+                });
+            });
+        });
+    });
+
+
+    on(`clicked:repeating_npcskills:check`, () => {
+        getAttrs([`repeating_npcskills_npcskill`, `repeating_npcskills_npcskill_total`, `repeating_npcskills_npcskill_ed`], v => {
+            const npcskill = v.repeating_npcskills_npcskill;
+            const npcskill_total = parseInt(v.repeating_npcskills_npcskill_total)||0;
+            const npcskill_ed = parseInt(v.repeating_npcskills_npcskill_ed)||0;
+            const npcskill_final = npcskill_total + npcskill_ed;
+            const roll_string = `@{whisper}&{template:dicepool} {{name=@{character_name} fait un test de ${npcskill}}} {{pool=[[${npcskill_final}]]}} {{dices=[[[[${npcskill_final}-1]]d6]]}} {{wrath=[[1d6cs>6cf<1]]}} {{icons=[[0]]}} {{fumble=0}} {{critic=0}}`;
+            startRoll(roll_string, roll => {
+                const dices = roll.results.dices.dice;
+                const wraths = roll.results.wrath.dice;
+                let iconsd = 0;
+                let iconsw = 0;
+                dices.forEach(dice => {
+                    if (dice === 6) iconsd = iconsd + 2;
+                    else if (dice === 4 || dice === 5) iconsd = iconsd + 1;
+                });
+                wraths.forEach(wrath => {
+                    if (wrath === 6) iconsw = iconsw + 2;
+                    else if (wrath === 4 || wrath === 5) iconsw = iconsw + 1;
+                })
+                const icons = iconsd + iconsw;
+                finishRoll(roll.rollId, {
+                    dices: iconsd,
+                    wrath: iconsw,
+                    icons: icons
+                });
+            });
+        });
+    });
+
+
+    on(`clicked:repeating_npcskills:help`, () => {
+        getAttrs([`repeating_npcskills_npcskill_help`, `repeating_npcskills_npcskill`], v => {
+            const skill_namefr = v.repeating_npcskills_npcskill;
+            const skill_help = parseInt(v.repeating_npcskills_npcskill_help)||0;
+            const roll_string = `@{whisper}&{template:dicepool} {{name=@{character_name} aide à faire un test : ${skill_namefr}}} {{pool=[[${skill_help}]]}} {{dices=[[[[${skill_help}-1]]d6]]}} {{wrath=[[1d6cs>6cf<1]]}} {{icons=[[0]]}} {{fumble=0}} {{critic=0}}`;
+            startRoll(roll_string, roll => {
+                const dices = roll.results.dices.dice;
+                const wraths = roll.results.wrath.dice;
+                let iconsd = 0;
+                let iconsw = 0;
+                dices.forEach(dice => {
+                    if (dice === 6) iconsd = iconsd + 2;
+                    else if (dice === 4 || dice === 5) iconsd = iconsd + 1;
+                });
+                wraths.forEach(wrath => {
+                    if (wrath === 6) iconsw = iconsw + 2;
+                    else if (wrath === 4 || wrath === 5) iconsw = iconsw + 1;
+                })
+                const icons = iconsd + iconsw;
+                finishRoll(roll.rollId, {
+                    dices: iconsd,
+                    wrath: iconsw,
+                    icons: icons
+                });
+            });
+        });
+    });
+    
 
 </script>

@@ -91,7 +91,8 @@ fieldset.sheet-input,
 }
 
 .sheet-number-fixed,
-button[type=roll] {
+button[type=roll], 
+button[type=action] {
     font-weight: 800;
 }
 
@@ -248,7 +249,8 @@ button[type=roll].sheet-descr-roll::before,
     color: crimson;
 }
 
-button[type=roll].sheet-roll.sheet-altroll {
+button[type=roll].sheet-roll.sheet-altroll,
+button[type=action].sheet-roll.sheet-altroll {
     color: blue;
 }
 
@@ -285,7 +287,8 @@ button[type=roll].sheet-roll.sheet-altroll {
 
 .sheet-textarea,
 .sheet-input,
-button[type=roll] {
+button[type=roll], 
+button[type=action] {
     border: 1px solid crimson;
 }
 
@@ -303,6 +306,7 @@ button[type=roll] {
 .sheet-titles,
 .sheet-subtitles,
 button[type=roll],
+button[type=action],
 .repcontrol_add,
 .repcontrol_edit,
 .sheet-select select,
@@ -329,13 +333,20 @@ button[type=roll],
 
 
                                         /*  ROLL BUTTONS  */
-button[type=roll] {
+button[type=roll],
+button[type=action] {
     color: darkgoldenrod;
     width: min-content;
     margin: 0;
 }
 
-button[type=roll].sheet-roll::before {
+button[type=action] {
+    border-radius: 50%;
+    background-color: silver;
+}
+
+button[type=roll].sheet-roll::before, 
+button[type=action].sheet-roll::before {
     font-family: 'dicefontd6';
     content: 'F ';
 }
@@ -447,6 +458,7 @@ button[type=roll].sheet-mutation-rolls {
     width: 85px;
     height: 30px;
     border: 2px solid green;
+    border-radius: 0%;
 }
 
 .sheet-tabstoggle[value="pcattr"] ~ div .sheet-pcbtn1 {background-color: silver; border: 2px solid green; color: green; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;}
@@ -483,8 +495,24 @@ button[type=roll].sheet-mutation-rolls {
     grid-column: 4 / 6;
 }
 
+.sheet-5-7 {
+    grid-column: 5 / 7;
+}
+
+.sheet-7 {
+    grid-column: 7;
+}
+
 .sheet-7-17 {
     grid-column: 7 / 17;
+}
+
+.sheet-10-12 {
+    grid-column: 10 / 12;
+}
+
+.sheet-12 {
+    grid-column: 12;
 }
 
 .sheet-12-14 {
@@ -493,6 +521,10 @@ button[type=roll].sheet-mutation-rolls {
 
 .sheet-14-16 {
     grid-column: 14 / 16;
+}
+
+.sheet-16 {
+    grid-column: 16;
 }
 
 .sheet-gridxp {
